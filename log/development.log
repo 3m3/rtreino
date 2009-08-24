@@ -759,3 +759,94 @@ Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/niveis/50/edit]
   [4;36;1mSQL (4.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090608221356')[0m
   [4;35;1mSQL (1.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090608212820')[0m
   [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090608220927')[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-08-24 18:06:53) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 30ms (View: 2, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing NivelsController#index (for 127.0.0.1 at 2009-08-24 18:07:18) [GET]
+  [4;35;1mNivel Load (0.0ms)[0m   [0mSQLite3::SQLException: no such table: niveis: SELECT * FROM "niveis" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: niveis: SELECT * FROM "niveis" ):
+  app/controllers/nivels_controller.rb:5:in `index'
+  haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (12.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProblemas (20090608212820)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "problemas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "id_no_pku" integer, "nome" varchar(255), "link" varchar(255), "categorias_old" integer, "origem_old" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090608212820')[0m
+Migrating to CreateNivels (20090608220927)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "nivels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descricao" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090608220927')[0m
+Migrating to CreateNiveis (20090608221356)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "niveis" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descricao" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090608221356')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("niveis")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("nivels")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("problemas")[0m
+
+
+Processing NivelsController#index (for 127.0.0.1 at 2009-08-24 18:07:56) [GET]
+  [4;36;1mNivel Load (0.6ms)[0m   [0;1mSELECT * FROM "niveis" [0m
+
+ActionView::MissingTemplate (Missing template nivels/index.erb in view path app/views):
+  app/controllers/nivels_controller.rb:7:in `index'
+  haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NiveisController#index (for 127.0.0.1 at 2009-08-24 18:07:59) [GET]
+  [4;35;1mNivel Load (0.4ms)[0m   [0mSELECT * FROM "niveis" [0m
+Rendering template within layouts/niveis
+Rendering niveis/index
+Completed in 52ms (View: 46, DB: 0) | 200 OK [http://localhost/niveis]
+
+
+Processing NiveisController#index (for 127.0.0.1 at 2009-08-24 18:11:26) [GET]
+  [4;36;1mNivel Load (0.4ms)[0m   [0;1mSELECT * FROM "niveis" [0m
+Rendering template within layouts/niveis
+Rendering niveis/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/niveis]
+
+
+Processing NiveisController#index (for 127.0.0.1 at 2009-08-24 18:11:26) [GET]
+  [4;35;1mNivel Load (0.4ms)[0m   [0mSELECT * FROM "niveis" [0m
+Rendering template within layouts/niveis
+Rendering niveis/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/niveis]
+
+
+Processing NiveisController#index (for 127.0.0.1 at 2009-08-24 18:11:26) [GET]
+  [4;36;1mNivel Load (0.4ms)[0m   [0;1mSELECT * FROM "niveis" [0m
+Rendering template within layouts/niveis
+Rendering niveis/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/niveis]

@@ -3832,3 +3832,31 @@ Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/niveis]
 Rendering niveis/show.html.erb
   [4;35;1mNivel Create (0.5ms)[0m   [0mINSERT INTO "niveis" ("created_at", "updated_at", "descricao") VALUES('2009-06-08 23:13:46', '2009-06-08 23:13:46', 'value for descricao')[0m
 Rendering problemas/new.html.erb
+REQUESTING PAGE: GET /problemas/new with {} and HTTP headers {}
+
+
+Processing ProblemasController#new (for 127.0.0.1 at 2009-08-24 18:04:56) [GET]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-24 18:04:56) [GET]
+REQUESTING PAGE: GET /niveis/new with {} and HTTP headers {}
+
+
+Processing NiveisController#new (for 127.0.0.1 at 2009-08-24 18:04:56) [GET]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-24 18:04:56) [GET]
+REQUESTING PAGE: GET /problemas/new with {} and HTTP headers {}
+
+
+Processing ProblemasController#new (for 127.0.0.1 at 2009-08-24 18:05:08) [GET]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-24 18:05:08) [GET]
+REQUESTING PAGE: GET /niveis/new with {} and HTTP headers {}
+
+
+Processing NiveisController#new (for 127.0.0.1 at 2009-08-24 18:05:08) [GET]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-24 18:05:08) [GET]
