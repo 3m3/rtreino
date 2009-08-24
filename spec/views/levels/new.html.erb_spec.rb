@@ -15,6 +15,7 @@ describe "/levels/new.html.erb" do
 
     response.should have_tag("form[action=?][method=post]", levels_path) do
       with_tag("input#level_description[name=?]", "level[description]")
+      with_tag("input#level_difficult_value[name=?]", "level[difficult_value]")
     end
   end
 end
