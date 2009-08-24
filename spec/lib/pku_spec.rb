@@ -6,7 +6,7 @@ require 'timeout'
 
 describe PKU do
 
-  it "should request for the submissions for the user" do
+  it "should be able to get one submission" do
     submission = {"Run ID" => "5137643",
                   "User" => "rtreino",
                   "Problem" => "1000",
