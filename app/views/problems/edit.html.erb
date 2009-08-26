@@ -1,6 +1,6 @@
-<h1>Editing problems</h1>
+<h1>Editing problem</h1>
 
-<% form_for(@problems) do |f| %>
+<% form_for(@problem) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -20,5 +20,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @problems %> |
+<%= link_to 'Show', @problem %> |
 <%= link_to 'Back', problems_path %>

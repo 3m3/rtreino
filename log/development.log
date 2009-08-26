@@ -1338,3 +1338,441 @@ Migrating to CreateCategories (20090826010555)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("nivels")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("problemas")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("problems")[0m
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:23:52) [GET]
+  [4;35;1mProblems Load (0.7ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x232c150>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:24:21) [GET]
+  [4;36;1mProblems Load (0.5ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x2481f3c>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (95.8ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LevelsController#index (for 127.0.0.1 at 2009-08-25 22:24:29) [GET]
+  [4;35;1mLevel Load (1.2ms)[0m   [0mSELECT * FROM "levels" [0m
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 32ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/levels/]
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:24:34) [GET]
+  [4;36;1mProblems Load (0.4ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x25537d0>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-08-25 22:24:42) [GET]
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2009-08-25 22:24:46) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2009-08-25 22:24:48) [POST]
+  Parameters: {"category"=>{"name"=>"teste"}, "commit"=>"Create", "authenticity_token"=>"P83fU6k0gJLwfQxldUtIhBp7NCnpvAauKoWOoTCkZzY="}
+  [4;36;1mCategory Create (0.5ms)[0m   [0;1mINSERT INTO "categories" ("name", "updated_at", "created_at") VALUES('teste', '2009-08-26 01:24:48', '2009-08-26 01:24:48')[0m
+Redirected to http://0.0.0.0:3000/categories/1
+Completed in 106ms (DB: 0) | 302 Found [http://0.0.0.0/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-08-25 22:24:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-08-25 22:24:49) [GET]
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/categories]
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:27:30) [GET]
+  [4;35;1mProblems Load (1.1ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x251a0e8>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:37) [GET]
+  [4;36;1mProblems Load (0.4ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x23ab9dc>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (100.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:38) [GET]
+  [4;35;1mProblems Load (0.5ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x252a858>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:38) [GET]
+  [4;36;1mProblems Load (0.4ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x23b1b70>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (100.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:38) [GET]
+  [4;35;1mProblems Load (0.4ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x250f698>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:39) [GET]
+  [4;36;1mProblems Load (0.4ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x239a8e4>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (58.2ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:39) [GET]
+  [4;35;1mProblems Load (0.4ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x24ec404>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:39) [GET]
+  [4;36;1mProblems Load (0.7ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x237fc4c>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:39) [GET]
+  [4;35;1mProblems Load (0.4ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x24c5fd4>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:39) [GET]
+  [4;36;1mProblems Load (0.4ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x235b9f0>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:39) [GET]
+  [4;35;1mProblems Load (0.4ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x24a2e80>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:40) [GET]
+  [4;36;1mProblems Load (0.5ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x233d07c>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:40) [GET]
+  [4;35;1mProblems Load (0.4ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x24906e0>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:40) [GET]
+  [4;36;1mProblems Load (0.4ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x265e47c>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:31:40) [GET]
+  [4;35;1mProblems Load (0.4ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+
+ActionView::TemplateError (undefined local variable or method `new_problems_path' for #<ActionView::Base:0x2473db0>) on line #24 of app/views/problems/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'New problems', new_problems_path %>
+
+    app/views/problems/index.html.erb:24
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/problems_controller.rb:7:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)

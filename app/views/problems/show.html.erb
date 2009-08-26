@@ -1,18 +1,18 @@
 <p>
   <b>Id:</b>
-  <%=h @problems.id %>
+  <%=h @problem.id %>
 </p>
 
 <p>
   <b>Name:</b>
-  <%=h @problems.name %>
+  <%=h @problem.name %>
 </p>
 
 <p>
   <b>Source:</b>
-  <%=h @problems.source %>
+  <%=h @problem.source %>
 </p>
 
 
-<%= link_to 'Edit', edit_problems_path(@problems) %> |
+<%= link_to 'Edit', edit_problem_path(@problem) %> |
 <%= link_to 'Back', problems_path %>

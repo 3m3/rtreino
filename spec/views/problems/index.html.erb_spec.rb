@@ -5,12 +5,12 @@ describe "/problems/index.html.erb" do
 
   before(:each) do
     assigns[:problems] = [
-      stub_model(Problems,
+      stub_model(Problem,
         :id => "value for id",
         :name => "value for name",
         :source => "value for source"
       ),
-      stub_model(Problems,
+      stub_model(Problem,
         :id => "value for id",
         :name => "value for name",
         :source => "value for source"

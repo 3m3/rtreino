@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :categories
-
   map.resources :problems
+
+  map.resources :categories
 
   map.resources :levels
 

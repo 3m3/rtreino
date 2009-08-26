@@ -7,18 +7,18 @@
     <th>Source</th>
   </tr>
 
-<% @problems.each do |problems| %>
+<% @problems.each do |problem| %>
   <tr>
-    <td><%=h problems.id %></td>
-    <td><%=h problems.name %></td>
-    <td><%=h problems.source %></td>
-    <td><%= link_to 'Show', problems %></td>
-    <td><%= link_to 'Edit', edit_problems_path(problems) %></td>
-    <td><%= link_to 'Destroy', problems, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h problem.id %></td>
+    <td><%=h problem.name %></td>
+    <td><%=h problem.source %></td>
+    <td><%= link_to 'Show', problem %></td>
+    <td><%= link_to 'Edit', edit_problem_path(problem) %></td>
+    <td><%= link_to 'Destroy', problem, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New problems', new_problems_path %>
+<%= link_to 'New problem', new_problem_path %>

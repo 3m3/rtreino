@@ -4,7 +4,7 @@ describe "/problems/new.html.erb" do
   include ProblemsHelper
 
   before(:each) do
-    assigns[:problems] = stub_model(Problems,
+    assigns[:problem] = stub_model(Problem,
       :new_record? => true,
       :id => "value for id",
       :name => "value for name",
@@ -12,13 +12,13 @@ describe "/problems/new.html.erb" do
     )
   end
 
-  it "renders new problems form" do
+  it "renders new problem form" do
     render
 
     response.should have_tag("form[action=?][method=post]", problems_path) do
-      with_tag("input#problems_id[name=?]", "problems[id]")
-      with_tag("input#problems_name[name=?]", "problems[name]")
-      with_tag("input#problems_source[name=?]", "problems[source]")
+      with_tag("input#problem_id[name=?]", "problem[id]")
+      with_tag("input#problem_name[name=?]", "problem[name]")
+      with_tag("input#problem_source[name=?]", "problem[source]")
     end
   end
 end
