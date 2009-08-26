@@ -1776,3 +1776,44 @@ ActionView::TemplateError (undefined local variable or method `new_problems_path
 Rendered rescues/_trace (60.0ms)
 Rendered rescues/_request_and_response (0.2ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:42:20) [GET]
+  [4;36;1mProblem Load (0.7ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/problems]
+
+
+Processing LevelsController#index (for 127.0.0.1 at 2009-08-25 22:42:25) [GET]
+  [4;35;1mLevel Load (1.0ms)[0m   [0mSELECT * FROM "levels" [0m
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/levels/]
+
+
+Processing LevelsController#index (for 127.0.0.1 at 2009-08-25 22:44:34) [GET]
+  [4;36;1mLevel Load (0.9ms)[0m   [0;1mSELECT * FROM "levels" [0m
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/levels/]
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:44:42) [GET]
+  [4;35;1mProblem Load (0.4ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/problems]
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:50:48) [GET]
+  [4;36;1mProblem Load (1.1ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/problems]
+
+
+Processing ProblemsController#new (for 127.0.0.1 at 2009-08-25 22:50:51) [GET]
+Rendering template within layouts/problems
+Rendering problems/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/problems/new]
