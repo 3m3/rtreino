@@ -1175,3 +1175,166 @@ Processing LevelsController#create (for 127.0.0.1 at 2009-08-24 18:49:27) [POST]
 Rendering template within layouts/levels
 Rendering levels/new
 Completed in 14ms (View: 3, DB: 0) | 200 OK [http://localhost/levels]
+
+
+Processing LevelsController#index (for 127.0.0.1 at 2009-08-25 21:28:57) [GET]
+  [4;36;1mLevel Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: levels: SELECT * FROM "levels" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: levels: SELECT * FROM "levels" ):
+  app/controllers/levels_controller.rb:5:in `index'
+  haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LevelsController#index (for 127.0.0.1 at 2009-08-25 21:28:59) [GET]
+  [4;35;1mLevel Load (0.0ms)[0m   [0mSQLite3::SQLException: no such table: levels: SELECT * FROM "levels" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: levels: SELECT * FROM "levels" ):
+  app/controllers/levels_controller.rb:5:in `index'
+  haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (91.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "created_at" datetime, "updated_at" datetime, "difficult_value" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "niveis" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descricao" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "nivels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descricao" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "problemas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "id_no_pku" integer, "nome" varchar(255), "link" varchar(255), "categorias_old" integer, "origem_old" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090824213306')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090608212820')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090824212039')[0m
+
+
+Processing LevelsController#index (for 127.0.0.1 at 2009-08-25 21:29:26) [GET]
+  [4;36;1mLevel Load (0.4ms)[0m   [0;1mSELECT * FROM "levels" [0m
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 33ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/levels]
+
+
+Processing LevelsController#new (for 127.0.0.1 at 2009-08-25 21:29:30) [GET]
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/levels/new]
+
+
+Processing LevelsController#create (for 127.0.0.1 at 2009-08-25 21:29:33) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"P83fU6k0gJLwfQxldUtIhBp7NCnpvAauKoWOoTCkZzY=", "level"=>{"description"=>"teste", "difficult_value"=>"1"}}
+  [4;35;1mLevel Create (0.7ms)[0m   [0mINSERT INTO "levels" ("updated_at", "description", "difficult_value", "created_at") VALUES('2009-08-26 00:29:33', 'teste', 1, '2009-08-26 00:29:33')[0m
+Redirected to http://0.0.0.0:3000/levels/1
+Completed in 44ms (DB: 1) | 302 Found [http://0.0.0.0/levels]
+
+
+Processing LevelsController#show (for 127.0.0.1 at 2009-08-25 21:29:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLevel Load (0.2ms)[0m   [0;1mSELECT * FROM "levels" WHERE ("levels"."id" = 1) [0m
+Rendering template within layouts/levels
+Rendering levels/show
+Completed in 25ms (View: 21, DB: 0) | 200 OK [http://0.0.0.0/levels/1]
+
+
+Processing LevelsController#index (for 127.0.0.1 at 2009-08-25 21:29:34) [GET]
+  [4;35;1mLevel Load (0.7ms)[0m   [0mSELECT * FROM "levels" [0m
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/levels]
+
+
+Processing LevelsController#new (for 127.0.0.1 at 2009-08-25 21:30:33) [GET]
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/levels/new]
+
+
+Processing ProblemasController#new (for 127.0.0.1 at 2009-08-25 21:30:38) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/problemas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-25 22:07:09) [GET]
+
+ActionController::RoutingError (No route matches "/problemas/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2009-08-25 22:07:12) [GET]
+  [4;36;1mProblems Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: problems: SELECT * FROM "problems" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: problems: SELECT * FROM "problems" ):
+  app/controllers/problems_controller.rb:5:in `index'
+  haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLevels (20090824212039)
+Migrating to AddColumnDifficultValue (20090824213306)
+Migrating to CreateLevelsData (20090824224509)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mLevel Delete all (0.6ms)[0m   [0mDELETE FROM "levels" WHERE 1=1[0m
+  [4;36;1mLevel Create (0.2ms)[0m   [0;1mINSERT INTO "levels" ("updated_at", "description", "difficult_value", "created_at") VALUES('2009-08-26 01:07:24', 'My grandma can solve it', 0, '2009-08-26 01:07:24')[0m
+  [4;35;1mLevel Create (0.1ms)[0m   [0mINSERT INTO "levels" ("updated_at", "description", "difficult_value", "created_at") VALUES('2009-08-26 01:07:24', 'Easy', 1, '2009-08-26 01:07:24')[0m
+  [4;36;1mLevel Create (0.1ms)[0m   [0;1mINSERT INTO "levels" ("updated_at", "description", "difficult_value", "created_at") VALUES('2009-08-26 01:07:24', 'Medium', 2, '2009-08-26 01:07:24')[0m
+  [4;35;1mLevel Create (0.1ms)[0m   [0mINSERT INTO "levels" ("updated_at", "description", "difficult_value", "created_at") VALUES('2009-08-26 01:07:24', 'Hard', 3, '2009-08-26 01:07:24')[0m
+  [4;36;1mLevel Create (0.1ms)[0m   [0;1mINSERT INTO "levels" ("updated_at", "description", "difficult_value", "created_at") VALUES('2009-08-26 01:07:24', 'Yoshi is thinking about this problem. Probably it is impossible.', 4, '2009-08-26 01:07:24')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090824224509')[0m
+Migrating to CreateProblems (20090826004907)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "problems" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "source" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090826004907')[0m
+Migrating to CreateCategories (20090826010555)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090826010555')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("levels")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("niveis")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("nivels")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("problemas")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("problems")[0m

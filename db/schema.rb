@@ -9,7 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090824213306) do
+ActiveRecord::Schema.define(:version => 20090826010555) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "levels", :force => true do |t|
     t.string   "description"
@@ -36,6 +42,13 @@ ActiveRecord::Schema.define(:version => 20090824213306) do
     t.string   "link"
     t.integer  "categorias_old"
     t.integer  "origem_old"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "problems", :force => true do |t|
+    t.string   "name"
+    t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
