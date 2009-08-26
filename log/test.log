@@ -3832,3 +3832,1712 @@ Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/niveis]
 Rendering niveis/show.html.erb
   [4;35;1mNivel Create (0.5ms)[0m   [0mINSERT INTO "niveis" ("created_at", "updated_at", "descricao") VALUES('2009-06-08 23:13:46', '2009-06-08 23:13:46', 'value for descricao')[0m
 Rendering problemas/new.html.erb
+REQUESTING PAGE: GET /problemas/new with {} and HTTP headers {}
+
+
+Processing ProblemasController#new (for 127.0.0.1 at 2009-08-24 18:04:56) [GET]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-24 18:04:56) [GET]
+REQUESTING PAGE: GET /niveis/new with {} and HTTP headers {}
+
+
+Processing NiveisController#new (for 127.0.0.1 at 2009-08-24 18:04:56) [GET]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-24 18:04:56) [GET]
+REQUESTING PAGE: GET /problemas/new with {} and HTTP headers {}
+
+
+Processing ProblemasController#new (for 127.0.0.1 at 2009-08-24 18:05:08) [GET]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-24 18:05:08) [GET]
+REQUESTING PAGE: GET /niveis/new with {} and HTTP headers {}
+
+
+Processing NiveisController#new (for 127.0.0.1 at 2009-08-24 18:05:08) [GET]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-24 18:05:08) [GET]
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:22:30) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/problemas
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/problemas/37]
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:22:30) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1011
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:22:30) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:22:30) [POST]
+  Parameters: {"problema"=>{}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:22:30) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Redirected to http://test.host/problemas/1015
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:22:30) [POST]
+  Parameters: {"problema"=>{}}
+Redirected to http://test.host/problemas/1016
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?]
+
+
+Processing ProblemasController#edit (for 0.0.0.0 at 2009-08-24 18:22:30) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37/edit]
+
+
+Processing ProblemasController#new (for 0.0.0.0 at 2009-08-24 18:22:30) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/new]
+
+
+Processing ProblemasController#show (for 0.0.0.0 at 2009-08-24 18:22:30) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37]
+
+
+Processing ProblemasController#index (for 0.0.0.0 at 2009-08-24 18:22:30) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas]
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:22:30) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/levels
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/levels/37]
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:22:30) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1031
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:22:30) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1032
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:22:30) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:22:30) [POST]
+  Parameters: {"level"=>{}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:22:30) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Redirected to http://test.host/levels/1035
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:22:30) [POST]
+  Parameters: {"level"=>{}}
+Redirected to http://test.host/levels/1036
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?]
+
+
+Processing LevelsController#edit (for 0.0.0.0 at 2009-08-24 18:22:30) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37/edit]
+
+
+Processing LevelsController#new (for 0.0.0.0 at 2009-08-24 18:22:30) [GET]
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/new]
+
+
+Processing LevelsController#show (for 0.0.0.0 at 2009-08-24 18:22:30) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37]
+
+
+Processing LevelsController#index (for 0.0.0.0 at 2009-08-24 18:22:30) [GET]
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels]
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:24:26) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/problemas
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/problemas/37]
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:24:26) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:24:26) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:24:26) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:24:26) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:24:26) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:24:26) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1011
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:24:26) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:24:26) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:24:26) [POST]
+  Parameters: {"problema"=>{}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:24:26) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Redirected to http://test.host/problemas/1015
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:24:26) [POST]
+  Parameters: {"problema"=>{}}
+Redirected to http://test.host/problemas/1016
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?]
+
+
+Processing ProblemasController#edit (for 0.0.0.0 at 2009-08-24 18:24:26) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37/edit]
+
+
+Processing ProblemasController#new (for 0.0.0.0 at 2009-08-24 18:24:26) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/new]
+
+
+Processing ProblemasController#show (for 0.0.0.0 at 2009-08-24 18:24:26) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37]
+
+
+Processing ProblemasController#index (for 0.0.0.0 at 2009-08-24 18:24:26) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas]
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:24:27) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/levels
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/levels/37]
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:24:27) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:24:27) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:24:27) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:24:27) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:24:27) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:24:27) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1031
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:24:27) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1032
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:24:27) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:24:27) [POST]
+  Parameters: {"level"=>{}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:24:27) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Redirected to http://test.host/levels/1035
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:24:27) [POST]
+  Parameters: {"level"=>{}}
+Redirected to http://test.host/levels/1036
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?]
+
+
+Processing LevelsController#edit (for 0.0.0.0 at 2009-08-24 18:24:27) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37/edit]
+
+
+Processing LevelsController#new (for 0.0.0.0 at 2009-08-24 18:24:27) [GET]
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/new]
+
+
+Processing LevelsController#show (for 0.0.0.0 at 2009-08-24 18:24:27) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37]
+
+
+Processing LevelsController#index (for 0.0.0.0 at 2009-08-24 18:24:27) [GET]
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (27.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (9.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProblemas (20090608212820)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "problemas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "id_no_pku" integer, "nome" varchar(255), "link" varchar(255), "categorias_old" integer, "origem_old" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090608212820')[0m
+Migrating to CreateLevels (20090824212039)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090824212039')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("levels")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("problemas")[0m
+Rendering problemas/edit.html.erb
+Rendering problemas/show.html.erb
+Rendering problemas/index.html.erb
+Rendering problemas/new.html.erb
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:25:48) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/problemas
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/problemas/37]
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:25:48) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:25:48) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:25:48) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:25:48) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:25:48) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:25:48) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:25:48) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1013
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:25:48) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:25:48) [POST]
+  Parameters: {"problema"=>{}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:25:48) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Redirected to http://test.host/problemas/1016
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:25:48) [POST]
+  Parameters: {"problema"=>{}}
+Redirected to http://test.host/problemas/1017
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?]
+
+
+Processing ProblemasController#edit (for 0.0.0.0 at 2009-08-24 18:25:48) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37/edit]
+
+
+Processing ProblemasController#new (for 0.0.0.0 at 2009-08-24 18:25:48) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/new]
+
+
+Processing ProblemasController#show (for 0.0.0.0 at 2009-08-24 18:25:48) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37]
+
+
+Processing ProblemasController#index (for 0.0.0.0 at 2009-08-24 18:25:48) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas]
+  [4;36;1mProblema Create (0.4ms)[0m   [0;1mINSERT INTO "problemas" ("id_no_pku", "categorias_old", "created_at", "nome", "updated_at", "origem_old", "link") VALUES(1, 1, '2009-08-24 21:25:48', 'value for nome', '2009-08-24 21:25:48', 1, 'value for link')[0m
+  [4;35;1mLevel Create (0.3ms)[0m   [0mINSERT INTO "levels" ("created_at", "updated_at", "description") VALUES('2009-08-24 21:25:48', '2009-08-24 21:25:48', 'value for description')[0m
+Rendering levels/index.html.erb
+Rendering levels/new.html.erb
+Rendering levels/edit.html.erb
+Rendering levels/show.html.erb
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:25:48) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/levels
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/levels/37]
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:25:48) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:25:48) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:25:48) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:25:48) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:25:48) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:25:48) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1033
+Completed in 56ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:25:49) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1034
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:25:49) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:25:49) [POST]
+  Parameters: {"level"=>{}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:25:49) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Redirected to http://test.host/levels/1037
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:25:49) [POST]
+  Parameters: {"level"=>{}}
+Redirected to http://test.host/levels/1038
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?]
+
+
+Processing LevelsController#edit (for 0.0.0.0 at 2009-08-24 18:25:49) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37/edit]
+
+
+Processing LevelsController#new (for 0.0.0.0 at 2009-08-24 18:25:49) [GET]
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/new]
+
+
+Processing LevelsController#show (for 0.0.0.0 at 2009-08-24 18:25:49) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37]
+
+
+Processing LevelsController#index (for 0.0.0.0 at 2009-08-24 18:25:49) [GET]
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels]
+Rendering levels/new.html.erb
+Rendering levels/new.html.erb
+Rendering problemas/edit.html.erb
+Rendering problemas/show.html.erb
+Rendering problemas/index.html.erb
+Rendering problemas/new.html.erb
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:32:31) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/problemas
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/problemas/37]
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:32:31) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1013
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:32:31) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:32:31) [POST]
+  Parameters: {"problema"=>{}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:32:31) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Redirected to http://test.host/problemas/1016
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:32:31) [POST]
+  Parameters: {"problema"=>{}}
+Redirected to http://test.host/problemas/1017
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?]
+
+
+Processing ProblemasController#edit (for 0.0.0.0 at 2009-08-24 18:32:31) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37/edit]
+
+
+Processing ProblemasController#new (for 0.0.0.0 at 2009-08-24 18:32:31) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/new]
+
+
+Processing ProblemasController#show (for 0.0.0.0 at 2009-08-24 18:32:31) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37]
+
+
+Processing ProblemasController#index (for 0.0.0.0 at 2009-08-24 18:32:31) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas]
+  [4;36;1mProblema Create (0.4ms)[0m   [0;1mINSERT INTO "problemas" ("id_no_pku", "categorias_old", "created_at", "nome", "updated_at", "origem_old", "link") VALUES(1, 1, '2009-08-24 21:32:31', 'value for nome', '2009-08-24 21:32:31', 1, 'value for link')[0m
+  [4;35;1mLevel Create (0.3ms)[0m   [0mINSERT INTO "levels" ("created_at", "updated_at", "description") VALUES('2009-08-24 21:32:31', '2009-08-24 21:32:31', 'value for description')[0m
+Rendering levels/index.html.erb
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:32:31) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/levels
+Completed in 4ms (DB: 0) | 302 Found [http://test.host/levels/37]
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:32:31) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1030
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:32:31) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1031
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:32:31) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:32:31) [POST]
+  Parameters: {"level"=>{}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:32:31) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Redirected to http://test.host/levels/1034
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:32:31) [POST]
+  Parameters: {"level"=>{}}
+Redirected to http://test.host/levels/1035
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?]
+
+
+Processing LevelsController#edit (for 0.0.0.0 at 2009-08-24 18:32:32) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37/edit]
+
+
+Processing LevelsController#new (for 0.0.0.0 at 2009-08-24 18:32:32) [GET]
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/new]
+
+
+Processing LevelsController#show (for 0.0.0.0 at 2009-08-24 18:32:32) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37]
+
+
+Processing LevelsController#index (for 0.0.0.0 at 2009-08-24 18:32:32) [GET]
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels]
+Rendering levels/show.html.erb
+Rendering levels/edit.html.erb
+Rendering levels/new.html.erb
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProblemas (20090608212820)
+Migrating to CreateLevels (20090824212039)
+Migrating to AddColumnDifficultValue (20090824213306)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "levels" ADD "difficult_value" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090824213306')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("levels")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("problemas")[0m
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:34:29) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/levels
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/levels/37]
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:34:29) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:34:29) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:34:29) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:34:29) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:34:29) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:34:29) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1007
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:34:29) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1008
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:34:29) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:34:29) [POST]
+  Parameters: {"level"=>{}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:34:29) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Redirected to http://test.host/levels/1011
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:34:29) [POST]
+  Parameters: {"level"=>{}}
+Redirected to http://test.host/levels/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?]
+
+
+Processing LevelsController#edit (for 0.0.0.0 at 2009-08-24 18:34:29) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37/edit]
+
+
+Processing LevelsController#new (for 0.0.0.0 at 2009-08-24 18:34:29) [GET]
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/new]
+
+
+Processing LevelsController#show (for 0.0.0.0 at 2009-08-24 18:34:29) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37]
+
+
+Processing LevelsController#index (for 0.0.0.0 at 2009-08-24 18:34:29) [GET]
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels]
+  [4;36;1mLevel Create (0.4ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:36:48', '2009-08-24 21:36:48', 2, 'value for description')[0m
+  [4;36;1mLevel Create (0.4ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:38:07', '2009-08-24 21:38:07', 2, 'value for description')[0m
+  [4;35;1mLevel Create (0.2ms)[0m   [0mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:38:07', '2009-08-24 21:38:07', -1, 'Ovo com banana')[0m
+  [4;36;1mLevel Create (0.4ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:38:19', '2009-08-24 21:38:19', 2, 'value for description')[0m
+  [4;35;1mLevel Create (0.2ms)[0m   [0mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:38:19', '2009-08-24 21:38:19', -1, 'Ovo com banana')[0m
+  [4;36;1mLevel Create (0.4ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:39:58', '2009-08-24 21:39:58', 2, 'value for description')[0m
+  [4;36;1mLevel Create (0.4ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:40:00', '2009-08-24 21:40:00', 2, 'value for description')[0m
+  [4;36;1mLevel Create (0.5ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:44:36', '2009-08-24 21:44:36', 2, 'value for description')[0m
+Rendering problemas/edit.html.erb
+Rendering problemas/show.html.erb
+Rendering problemas/index.html.erb
+Rendering problemas/new.html.erb
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:44:38) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/problemas
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/problemas/37]
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:44:38) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1013
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:44:38) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:44:38) [POST]
+  Parameters: {"problema"=>{}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:44:38) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Redirected to http://test.host/problemas/1016
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:44:38) [POST]
+  Parameters: {"problema"=>{}}
+Redirected to http://test.host/problemas/1017
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?]
+
+
+Processing ProblemasController#edit (for 0.0.0.0 at 2009-08-24 18:44:38) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37/edit]
+
+
+Processing ProblemasController#new (for 0.0.0.0 at 2009-08-24 18:44:38) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/new]
+
+
+Processing ProblemasController#show (for 0.0.0.0 at 2009-08-24 18:44:38) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37]
+
+
+Processing ProblemasController#index (for 0.0.0.0 at 2009-08-24 18:44:38) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas]
+  [4;36;1mProblema Create (0.4ms)[0m   [0;1mINSERT INTO "problemas" ("id_no_pku", "categorias_old", "created_at", "nome", "updated_at", "origem_old", "link") VALUES(1, 1, '2009-08-24 21:44:38', 'value for nome', '2009-08-24 21:44:38', 1, 'value for link')[0m
+Rendering levels/edit.html.erb
+Rendering levels/index.html.erb
+Rendering levels/show.html.erb
+Rendering levels/new.html.erb
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:44:38) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/levels
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/levels/37]
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:44:38) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1033
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:44:38) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1034
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:44:38) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:44:38) [POST]
+  Parameters: {"level"=>{}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:44:38) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Redirected to http://test.host/levels/1037
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:44:38) [POST]
+  Parameters: {"level"=>{}}
+Redirected to http://test.host/levels/1038
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?]
+
+
+Processing LevelsController#edit (for 0.0.0.0 at 2009-08-24 18:44:38) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37/edit]
+
+
+Processing LevelsController#new (for 0.0.0.0 at 2009-08-24 18:44:38) [GET]
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/new]
+
+
+Processing LevelsController#show (for 0.0.0.0 at 2009-08-24 18:44:38) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37]
+
+
+Processing LevelsController#index (for 0.0.0.0 at 2009-08-24 18:44:38) [GET]
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels]
+  [4;35;1mLevel Create (0.3ms)[0m   [0mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:44:38', '2009-08-24 21:44:38', 2, 'value for description')[0m
+  [4;36;1mLevel Create (0.4ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:45:26', '2009-08-24 21:45:26', 2, 'value for description')[0m
+  [4;35;1mLevel Create (0.2ms)[0m   [0mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:45:26', '2009-08-24 21:45:26', 11, 'Ovo com banana')[0m
+  [4;36;1mLevel Create (0.4ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:46:24', '2009-08-24 21:46:24', 2, 'value for description')[0m
+  [4;35;1mLevel Create (0.2ms)[0m   [0mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:46:24', '2009-08-24 21:46:24', -1, 'Ovo com banana')[0m
+  [4;36;1mLevel Create (0.4ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:46:38', '2009-08-24 21:46:38', 2, 'value for description')[0m
+Rendering problemas/edit.html.erb
+Rendering problemas/show.html.erb
+Rendering problemas/index.html.erb
+Rendering problemas/new.html.erb
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:46:40) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/problemas
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/problemas/37]
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:46:40) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1013
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:46:40) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:46:40) [POST]
+  Parameters: {"problema"=>{}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:46:40) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Redirected to http://test.host/problemas/1016
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:46:40) [POST]
+  Parameters: {"problema"=>{}}
+Redirected to http://test.host/problemas/1017
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?]
+
+
+Processing ProblemasController#edit (for 0.0.0.0 at 2009-08-24 18:46:40) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37/edit]
+
+
+Processing ProblemasController#new (for 0.0.0.0 at 2009-08-24 18:46:40) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/new]
+
+
+Processing ProblemasController#show (for 0.0.0.0 at 2009-08-24 18:46:40) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/show
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/problemas/37]
+
+
+Processing ProblemasController#index (for 0.0.0.0 at 2009-08-24 18:46:40) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas]
+  [4;36;1mProblema Create (0.4ms)[0m   [0;1mINSERT INTO "problemas" ("id_no_pku", "categorias_old", "created_at", "nome", "updated_at", "origem_old", "link") VALUES(1, 1, '2009-08-24 21:46:40', 'value for nome', '2009-08-24 21:46:40', 1, 'value for link')[0m
+Rendering levels/edit.html.erb
+Rendering levels/index.html.erb
+Rendering levels/show.html.erb
+Rendering levels/new.html.erb
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:46:40) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/levels
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/levels/37]
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:46:40) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1033
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:46:40) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1034
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:46:40) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:46:40) [POST]
+  Parameters: {"level"=>{}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:46:40) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Redirected to http://test.host/levels/1037
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:46:40) [POST]
+  Parameters: {"level"=>{}}
+Redirected to http://test.host/levels/1038
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?]
+
+
+Processing LevelsController#edit (for 0.0.0.0 at 2009-08-24 18:46:40) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37/edit]
+
+
+Processing LevelsController#new (for 0.0.0.0 at 2009-08-24 18:46:40) [GET]
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/new]
+
+
+Processing LevelsController#show (for 0.0.0.0 at 2009-08-24 18:46:40) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37]
+
+
+Processing LevelsController#index (for 0.0.0.0 at 2009-08-24 18:46:40) [GET]
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels]
+  [4;35;1mLevel Create (0.3ms)[0m   [0mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:46:40', '2009-08-24 21:46:40', 2, 'value for description')[0m
+  [4;36;1mLevel Create (0.4ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:47:03', '2009-08-24 21:47:03', 2, 'value for description')[0m
+  [4;36;1mLevel Create (0.4ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:47:45', '2009-08-24 21:47:45', 2, 'value for description')[0m
+  [4;36;1mLevel Create (0.7ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:48:26', '2009-08-24 21:48:26', 2, 'value for description')[0m
+  [4;35;1mLevel Create (0.3ms)[0m   [0mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:48:26', '2009-08-24 21:48:26', 3, '')[0m
+  [4;36;1mLevel Create (0.4ms)[0m   [0;1mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:49:02', '2009-08-24 21:49:02', 2, 'value for description')[0m
+Rendering problemas/edit.html.erb
+Rendering problemas/show.html.erb
+Rendering problemas/index.html.erb
+Rendering problemas/new.html.erb
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:49:04) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/problemas
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/problemas/37]
+
+
+Processing ProblemasController#destroy (for 0.0.0.0 at 2009-08-24 18:49:04) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"problema"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/problemas/1013
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas/1]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:49:04) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:49:04) [POST]
+  Parameters: {"problema"=>{}}
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas?]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:49:04) [POST]
+  Parameters: {"problema"=>{"these"=>"params"}}
+Redirected to http://test.host/problemas/1016
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?problema%5Bthese%5D=params]
+
+
+Processing ProblemasController#create (for 0.0.0.0 at 2009-08-24 18:49:04) [POST]
+  Parameters: {"problema"=>{}}
+Redirected to http://test.host/problemas/1017
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/problemas?]
+
+
+Processing ProblemasController#edit (for 0.0.0.0 at 2009-08-24 18:49:04) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37/edit]
+
+
+Processing ProblemasController#new (for 0.0.0.0 at 2009-08-24 18:49:04) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/new]
+
+
+Processing ProblemasController#show (for 0.0.0.0 at 2009-08-24 18:49:04) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/problemas
+Rendering problemas/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas/37]
+
+
+Processing ProblemasController#index (for 0.0.0.0 at 2009-08-24 18:49:04) [GET]
+Rendering template within layouts/problemas
+Rendering problemas/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/problemas]
+  [4;36;1mProblema Create (0.4ms)[0m   [0;1mINSERT INTO "problemas" ("id_no_pku", "categorias_old", "created_at", "nome", "updated_at", "origem_old", "link") VALUES(1, 1, '2009-08-24 21:49:04', 'value for nome', '2009-08-24 21:49:04', 1, 'value for link')[0m
+Rendering levels/edit.html.erb
+Rendering levels/index.html.erb
+Rendering levels/show.html.erb
+Rendering levels/new.html.erb
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:49:04) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/levels
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/levels/37]
+
+
+Processing LevelsController#destroy (for 0.0.0.0 at 2009-08-24 18:49:04) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"level"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37?level%5Bthese%5D=params]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1033
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#update (for 0.0.0.0 at 2009-08-24 18:49:04) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/levels/1034
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels/1]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:49:04) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:49:04) [POST]
+  Parameters: {"level"=>{}}
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels?]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:49:04) [POST]
+  Parameters: {"level"=>{"these"=>"params"}}
+Redirected to http://test.host/levels/1037
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?level%5Bthese%5D=params]
+
+
+Processing LevelsController#create (for 0.0.0.0 at 2009-08-24 18:49:04) [POST]
+  Parameters: {"level"=>{}}
+Redirected to http://test.host/levels/1038
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/levels?]
+
+
+Processing LevelsController#edit (for 0.0.0.0 at 2009-08-24 18:49:04) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37/edit]
+
+
+Processing LevelsController#new (for 0.0.0.0 at 2009-08-24 18:49:04) [GET]
+Rendering template within layouts/levels
+Rendering levels/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/new]
+
+
+Processing LevelsController#show (for 0.0.0.0 at 2009-08-24 18:49:04) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/levels
+Rendering levels/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels/37]
+
+
+Processing LevelsController#index (for 0.0.0.0 at 2009-08-24 18:49:04) [GET]
+Rendering template within layouts/levels
+Rendering levels/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/levels]
+  [4;35;1mLevel Create (0.3ms)[0m   [0mINSERT INTO "levels" ("created_at", "updated_at", "difficult_value", "description") VALUES('2009-08-24 21:49:04', '2009-08-24 21:49:04', 2, 'value for description')[0m

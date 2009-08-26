@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :niveis
+  map.resources :levels
 
   map.resources :problemas
 
