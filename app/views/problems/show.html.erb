@@ -1,0 +1,18 @@
+<p>
+  <b>Id:</b>
+  <%=h @problems.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @problems.name %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%=h @problems.source %>
+</p>
+
+
+<%= link_to 'Edit', edit_problems_path(@problems) %> |
+<%= link_to 'Back', problems_path %>
