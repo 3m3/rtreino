@@ -4,7 +4,7 @@ describe "/problems/show.html.erb" do
   include ProblemsHelper
   before(:each) do
     assigns[:problem] = @problem = stub_model(Problem,
-      :id => "value for id",
+      :code => "value for code",
       :name => "value for name",
       :source => "value for source"
     )
@@ -12,7 +12,7 @@ describe "/problems/show.html.erb" do
 
   it "renders attributes in <p>" do
     render
-    response.should have_text(/value\ for\ id/)
+    response.should have_text(/value\ for\ code/)
     response.should have_text(/value\ for\ name/)
     response.should have_text(/value\ for\ source/)
   end

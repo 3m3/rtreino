@@ -6,12 +6,12 @@ describe "/problems/index.html.erb" do
   before(:each) do
     assigns[:problems] = [
       stub_model(Problem,
-        :id => "value for id",
+        :code => "value for code",
         :name => "value for name",
         :source => "value for source"
       ),
       stub_model(Problem,
-        :id => "value for id",
+        :code => "value for code",
         :name => "value for name",
         :source => "value for source"
       )
@@ -20,7 +20,7 @@ describe "/problems/index.html.erb" do
 
   it "renders a list of problems" do
     render
-    response.should have_tag("tr>td", "value for id".to_s, 2)
+    response.should have_tag("tr>td", "value for code".to_s, 2)
     response.should have_tag("tr>td", "value for name".to_s, 2)
     response.should have_tag("tr>td", "value for source".to_s, 2)
   end

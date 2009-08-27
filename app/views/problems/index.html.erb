@@ -2,14 +2,14 @@
 
 <table>
   <tr>
-    <th>Id</th>
+    <th>Code</th>
     <th>Name</th>
     <th>Source</th>
   </tr>
 
 <% @problems.each do |problem| %>
   <tr>
-    <td><%=h problem.id %></td>
+    <td><%=h problem.code %></td>
     <td><%=h problem.name %></td>
     <td><%=h problem.source %></td>
     <td><%= link_to 'Show', problem %></td>
