@@ -3,6 +3,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :problemas
 
+  map.connect '/', :controller => "problemas", :action => "index"
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
