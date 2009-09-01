@@ -27,4 +27,9 @@ describe PKU do
     lambda{PKU.submissions_for("rtreino")}.should raise_error Timeout::Error
   end
   
+  it "should be able to get the first submission of the second page" do
+    # http://acm.pku.edu.cn/JudgeOnline/status?user_id=rtreino&top=5747447
+    # http://acm.pku.edu.cn/JudgeOnline/status?user_id=rtreino
+  end
+  
 end

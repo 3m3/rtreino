@@ -6,9 +6,9 @@ require 'timeout'
 class PKU
   
   def self.submissions_for(user)
-    Timeout::timeout(1) do
+    Timeout::timeout(3) do
       table = Hpricot(open("http://acm.pku.edu.cn/JudgeOnline/status?user_id=#{user}")).at("//table[@class='a']")
-      header = get_header(table.at("tr[@class='in']"))      
+      header = get_header(table.at("tr[@class='in']"))
       table.search("tr[@align='center']").collect do |row|
         get_submission(row,header)
       end
