@@ -5,7 +5,8 @@ describe Problem do
     @valid_attributes = {
       :id => "value for id",
       :name => "value for name",
-      :source => "value for source"
+      :source => "value for source",
+      :category_id => 1
     }
   end
 

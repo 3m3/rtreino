@@ -1,0 +1,25 @@
+<%= f.error_messages %>
+
+<p>
+  <%= f.label :code %><br />
+  <%= f.text_field :code %>
+</p>
+<p>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :source %><br />
+  <%= f.text_field :source %>
+</p>
+<p>
+  <%= f.label :category_id, 'Category' %><br />
+  <%= f.select :category_id, Category.find(:all).map { |c| [c.name, c.id] }, :include_blank => true %>
+</p>
+<p>
+  <%= f.label :level_id %><br />
+  <%= f.select :level_id, Level.find(:all).map { |c| [c.description, c.id] }, :include_blank => true %>
+</p>
+<p>
+  <%= f.submit bt_submit %>
+</p>

@@ -13,6 +13,17 @@
   <%=h @problem.source %>
 </p>
 
+<p>
+  <b>Category:</b>
+  <%=h @problem.category.nil? ? '(none)' : @problem.category.name %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%=h @problem.level.nil? ? '(none)' : @problem.level.description %>
+</p>
+
+
 
 <%= link_to 'Edit', edit_problem_path(@problem) %> |
 <%= link_to 'Back', problems_path %>

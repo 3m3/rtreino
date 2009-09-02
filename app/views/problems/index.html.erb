@@ -5,6 +5,8 @@
     <th>Code</th>
     <th>Name</th>
     <th>Source</th>
+    <th>Category</th>
+    <th>Level</th>
   </tr>
 
 <% @problems.each do |problem| %>
@@ -12,6 +14,8 @@
     <td><%=h problem.code %></td>
     <td><%=h problem.name %></td>
     <td><%=h problem.source %></td>
+    <td><%=h problem.category.nil? ? "(none)" : problem.category.name %></td>
+    <td><%=h problem.level.nil? ? "(none)" : problem.level.description %></td>
     <td><%= link_to 'Show', problem %></td>
     <td><%= link_to 'Edit', edit_problem_path(problem) %></td>
     <td><%= link_to 'Destroy', problem, :confirm => 'Are you sure?', :method => :delete %></td>

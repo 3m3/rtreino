@@ -7,7 +7,9 @@ module NavigationHelpers
   #
   def path_to(page_name)
     case page_name
-    
+
+    when /the new problem page/
+      new_problem_path    
     when /the homepage/
       '/'
     
