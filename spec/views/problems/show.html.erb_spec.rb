@@ -7,11 +7,11 @@ describe "/problems/show.html.erb" do
       :code => "value for code",
       :name => "value for name",
       :source => "value for source",
-      :category_id => 1,
-      :category => stub_model(Category,
+      :categories => [
+        stub_model(Category,
           :id => 1,
           :name => 'Teste'
-        ),
+        )],
       :level_id => 1,
       :level => stub_model(Level,
           :id => 1,
@@ -33,7 +33,7 @@ describe "/problems/show.html.erb" do
       :code => "value for code",
       :name => "value for name",
       :source => "value for source",
-      :category_id => nil,
+      :categories => [], 
       :level_id => nil
     )
     render

@@ -58,7 +58,6 @@ class ProblemsController < ApplicationController
   # PUT /problems/1.xml
   def update
     @problem = Problem.find(params[:id])
-
     respond_to do |format|
       if @problem.update_attributes(params[:problem])
         flash[:notice] = 'Problem was successfully updated.'
@@ -81,5 +80,30 @@ class ProblemsController < ApplicationController
       format.html { redirect_to(problems_url) }
       format.xml  { head :ok }
     end
+  end
+
+
+  def add_category
+    @problem = Problem.find(params[:problem_id])
+    if params[:category_id]
+      @category = Category.find(params[:category_id])
+      unless @problem.categories.exists? @category.id
+        @problem.categories.push @category
+        @problem.save
+      end
+    end
+    render :action => :edit
+  end
+
+  def remove_category
+    @problem = Problem.find(params[:problem_id])
+    if params[:category_id]
+      @category = Category.find(params[:category_id])
+      if @problem.categories.exists? @category.id
+        @problem.categories.delete @category
+        @problem.save
+      end
+    end
+    render :action => :edit
   end
 end

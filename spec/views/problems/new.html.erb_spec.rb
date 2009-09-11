@@ -8,7 +8,8 @@ describe "/problems/new.html.erb" do
       :new_record? => true,
       :code => "value for code",
       :name => "value for name",
-      :source => "value for source"
+      :source => "value for source",
+      :categories => []
     )
   end
 
@@ -19,7 +20,6 @@ describe "/problems/new.html.erb" do
       with_tag("input#problem_code[name=?]", "problem[code]")
       with_tag("input#problem_name[name=?]", "problem[name]")
       with_tag("input#problem_source[name=?]", "problem[source]")
-      with_tag("select#problem_category_id[name=?]", "problem[category_id]")
       with_tag("select#problem_level_id[name=?]", "problem[level_id]")
     end
   end

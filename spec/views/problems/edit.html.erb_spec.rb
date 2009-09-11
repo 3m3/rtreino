@@ -8,7 +8,11 @@ describe "/problems/edit.html.erb" do
       :new_record? => false,
       :code => "value for code",
       :name => "value for name",
-      :source => "value for source"
+      :source => "value for source",
+      :categories => [
+        stub_model(Category,
+          :name => "category name"
+        )]
     )
   end
 
@@ -19,8 +23,9 @@ describe "/problems/edit.html.erb" do
       with_tag('input#problem_code[name=?]', "problem[code]")
       with_tag('input#problem_name[name=?]', "problem[name]")
       with_tag('input#problem_source[name=?]', "problem[source]")
-      with_tag('select#problem_category_id[name=?]', "problem[category_id]")
       with_tag('select#problem_level_id[name=?]', "problem[level_id]")
     end
+    response.should have_tag('select#category_id[name=?]', "category_id")
+    response.should have_tag('li', /category name\s+/)
   end
 end

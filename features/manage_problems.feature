@@ -15,8 +15,9 @@ Feature: Manage problems
 
   Scenario: Register new problem with category and level
     Given the following categories:
-      |id|name|
-      |1|Graph|
+      |name  |
+      |Graph |
+      |Ad-hoc|
     Given the following levels:
       |description|difficult_value|
       |easy       |0| 
@@ -26,18 +27,27 @@ Feature: Manage problems
     And I fill in "Name" with "name 1"
     And I fill in "Source" with "source 1"
     And I press "Create"
-    And I should see "(none)"
-    And I follow "Edit"
-    Then I select "Graph" from "problem_category_id"
+    And I follow "edit"
+    And I select "Graph" from "Category"
+    And I press "Add category"
     And I select "hard" from "Level"
     And I press "Update"
-    And I should see "code 1"
+    Then I should see "Graph"
+    And I follow "edit"
+    When I select "Ad-hoc" from "Category"
+    And I press "Add category"
+    And I press "Update"
+    Then I should see "code 1"
     And I should see "name 1"
     And I should see "source 1"
     And I should see "Graph"
+    And I should see "Ad-hoc"
     And I should see "hard"
-    Then I follow "Edit"
-    And "Graph" should be selected for "Category"
+    When I follow edit "Edit"
+    And I delete the "Graph" from "Category"
+    And I press "Update"
+    Then I should not see "Graph"
+    And I should see "Ad-hoc"
 
   Scenario: Delete problem
     Given the following problems:

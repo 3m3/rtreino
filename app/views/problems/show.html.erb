@@ -15,15 +15,21 @@
 
 <p>
   <b>Category:</b>
-  <%=h @problem.category.nil? ? '(none)' : @problem.category.name %>
+  <% unless @problem.categories.empty? %>
+    <ul>
+      <% @problem.categories.each do |category| %>
+        <li><%= category.name %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    (none)
+  <% end %>
 </p>
 
 <p>
   <b>Level:</b>
-  <%=h @problem.level.nil? ? '(none)' : @problem.level.description %>
+  <%= level_description_of @problem %>
 </p>
-
-
 
 <%= link_to 'Edit', edit_problem_path(@problem) %> |
 <%= link_to 'Back', problems_path %>

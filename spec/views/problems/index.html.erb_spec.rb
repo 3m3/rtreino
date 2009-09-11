@@ -9,9 +9,10 @@ describe "/problems/index.html.erb" do
         :code => "value for code",
         :name => "value for name",
         :source => "value for source",
-        :category => stub_model(Category,
+        :categories => [
+          stub_model(Category,
             :name => 'category_test'
-          ),
+          )],
         :level => stub_model(Level,
             :description => 'level_test'
           )
@@ -19,7 +20,8 @@ describe "/problems/index.html.erb" do
       stub_model(Problem,
         :code => "value for code",
         :name => "value for name",
-        :source => "value for source"
+        :source => "value for source",
+        :categories => []
       )
     ]
   end

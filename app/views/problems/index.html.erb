@@ -14,8 +14,14 @@
     <td><%=h problem.code %></td>
     <td><%=h problem.name %></td>
     <td><%=h problem.source %></td>
-    <td><%=h problem.category.nil? ? "(none)" : problem.category.name %></td>
-    <td><%=h problem.level.nil? ? "(none)" : problem.level.description %></td>
+    <td>
+      <ul>
+      <% problem.categories.each do |category| %>
+        <li><%= category.name %></li>
+      <% end %>
+      </ul>
+    </td>
+    <td><%= level_description_of problem %></td>
     <td><%= link_to 'Show', problem %></td>
     <td><%= link_to 'Edit', edit_problem_path(problem) %></td>
     <td><%= link_to 'Destroy', problem, :confirm => 'Are you sure?', :method => :delete %></td>

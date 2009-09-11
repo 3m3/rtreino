@@ -2,6 +2,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :messages
 
   map.resources :problems
+  map.connect 'problems/:problem_id/add_category', :controller => 'problems', :action => 'add_category'
+  map.connect 'problems/:problem_id/remove_category/:category_id', :controller => 'problems', :action => 'remove_category'
 
   map.resources :categories
 

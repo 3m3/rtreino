@@ -1,4 +1,4 @@
 class Problem < ActiveRecord::Base
-  belongs_to :category
+  has_and_belongs_to_many :categories, :join_table => 'problems_categories'
   belongs_to :level
 end
