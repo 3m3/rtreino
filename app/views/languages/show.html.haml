@@ -1,0 +1,11 @@
+%h1.heading
+  = "Language %s" % @language.id
+  
+- content_tag_for(:dl, @language) do
+  %dt.label= 'Name'
+  %dd.name= h @language.try(:name)
+  
+%p.actions
+  = link_to 'Edit', edit_language_path(@language)
+  |
+  = link_to 'Index', languages_path

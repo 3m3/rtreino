@@ -1,0 +1,17 @@
+%h1.heading
+  = "Statements"
+  
+%p.actions
+  = link_to 'New Statement', new_statement_path
+  
+%table
+  %thead.header
+    %tr
+      %th.language_id= 'Language'
+      %th.body= 'Body'
+      %th.actions= 'Actions'
+  %tbody.items.statements
+    - @statements.each do |statement|
+      = render 'item', :statement => statement
+      
+= will_paginate(@statements)

@@ -1,0 +1,9 @@
+- content_tag_for(:tr, statement, :class => cycle(:odd, :even)) do
+  %td.language_id= h statement.try(:language_id)
+  %td.body= h statement.try(:body)
+  %td.actions
+    = link_to 'Show', statement_path(statement)
+    |
+    = link_to 'Edit', edit_statement_path(statement)
+    |
+    = link_to 'Destroy', statement, :confirm => 'Are you sure?', :method => :delete

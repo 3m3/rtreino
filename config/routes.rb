@@ -1,9 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :categories
-
+  map.resources :problems, :has_many => :statements
+  map.resources :languages
   map.resources :levels
-
-  map.resources :problems
+  map.resources :category
 
   # The priority is based upon order of creation: first created -> highest priority.
 

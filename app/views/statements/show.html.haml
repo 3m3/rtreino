@@ -1,0 +1,12 @@
+%h1.heading
+  = "Statement of %s - <em>%s</em>" % [@problem.code, @problem.name]
+  
+- content_tag_for(:dl, @statement) do
+  %dd.language
+    in
+    %em= h @statement.language.name
+  %br
+  %dd.body= h @statement.try(:body)
+  
+%p.actions
+  = link_to 'Edit', edit_problem_statement_path(@problem, @statement)
