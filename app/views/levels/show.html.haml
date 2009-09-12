@@ -1,0 +1,11 @@
+%h1.heading
+  = "Level %s" % @level.id
+  
+- content_tag_for(:dl, @level) do
+  %dt.label= 'Name'
+  %dd.name= h @level.try(:name)
+  
+%p.actions
+  = link_to 'Edit', edit_level_path(@level)
+  |
+  = link_to 'Index', levels_path

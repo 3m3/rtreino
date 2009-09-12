@@ -1,0 +1,8 @@
+- content_tag_for(:tr, level, :class => cycle(:odd, :even)) do
+  %td.name= h level.try(:name)
+  %td.actions
+    = link_to 'Show', level_path(level)
+    |
+    = link_to 'Edit', edit_level_path(level)
+    |
+    = link_to 'Destroy', level, :confirm => 'Are you sure?', :method => :delete

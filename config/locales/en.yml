@@ -3,3 +3,14 @@
 
 en:
   hello: "Hello world"
+  formtastic:
+    labels:
+      problem:
+        code: "CODE"
+        name: "Name"
+        source: "Source"
+        level_id: "Level"
+    hints:
+      problem:
+        code: "Like in SPOJ"
+        source: "Croatian Highschool Competitions in Informatics > 2008 > Online Contest > #1"

@@ -1,0 +1,17 @@
+%h1.heading
+  = "Problem %s" % @problem.id
+  
+- content_tag_for(:dl, @problem) do
+  %dt.label= 'Code'
+  %dd.code= h @problem.try(:code)
+  %dt.label= 'Name'
+  %dd.name= h @problem.try(:name)
+  %dt.label= 'Source'
+  %dd.source= h @problem.try(:source)
+  %dt.label= 'Level'
+  %dd.level_id= h level_name_of(@problem)
+  
+%p.actions
+  = link_to 'Edit', edit_problem_path(@problem)
+  |
+  = link_to 'Index', problems_path

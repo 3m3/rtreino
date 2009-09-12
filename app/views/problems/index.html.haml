@@ -1,0 +1,19 @@
+%h1.heading
+  = "Problems"
+  
+%p.actions
+  = link_to 'New Problem', new_problem_path
+  
+%table
+  %thead.header
+    %tr
+      %th.code= 'Code'
+      %th.name= 'Name'
+      %th.source= 'Source'
+      %th.level_id= 'Level'
+      %th.actions= 'Actions'
+  %tbody.items.problems
+    - @problems.each do |problem|
+      = render 'item', :problem => problem
+      
+= will_paginate(@problems)

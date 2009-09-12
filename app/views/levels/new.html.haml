@@ -1,0 +1,10 @@
+%h1.heading
+  = 'New Level'
+  
+- semantic_form_for(@level) do |form|
+  = render 'form', :form => form
+  - form.buttons do
+    = form.commit_button 'Create'
+    
+%p.actions
+  = link_to 'Cancel', levels_path
