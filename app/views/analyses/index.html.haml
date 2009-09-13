@@ -1,0 +1,18 @@
+%h1.heading
+  = "Analyses"
+  
+%p.actions
+  = link_to 'New Analysis', new_analysis_path
+  
+%table
+  %thead.header
+    %tr
+      %th.body= 'Body'
+      %th.user_id= 'User'
+      %th.problem_id= 'Problem'
+      %th.actions= 'Actions'
+  %tbody.items.analyses
+    - @analyses.each do |analysis|
+      = render 'item', :analysis => analysis
+      
+= will_paginate(@analyses)

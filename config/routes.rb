@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :problems, :has_many => :statements
+  map.resources :analyses
+
+  map.resources :problems, :has_many => [:statements, :analyses]
   map.resources :languages
   map.resources :levels
   map.resources :category

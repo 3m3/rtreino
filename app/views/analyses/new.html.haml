@@ -1,0 +1,10 @@
+%h1.heading
+  = 'New Analysis'
+  
+- semantic_form_for([@problem, @analysis]) do |form|
+  = render 'form', :form => form
+  - form.buttons do
+    = form.commit_button 'Create'
+    
+%p.actions
+  = link_to 'Cancel', problem_path(@problem)

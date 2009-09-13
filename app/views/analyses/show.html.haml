@@ -1,0 +1,13 @@
+%h1.heading
+  = "Analysis %s" % @analysis.id
+  
+- content_tag_for(:dl, @analysis) do
+  %dt.label= 'Body'
+  %dd.body= h @analysis.try(:body)
+  %dt.label= 'User'
+  %dd.user_id= h @analysis.try(:user_id)
+  %dt.label= 'Problem'
+  %dd.problem_id= h @analysis.try(:problem_id)
+  
+%p.actions
+  = link_to 'Back to the problem', edit_problem_path(@problem)

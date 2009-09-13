@@ -16,13 +16,30 @@
 
 %div#statements
   - @problem.statements.each do |statement|
-    %div{ :id => "statement_#{statement.id}" }
+    %div.statement{ :id => "statement_#{statement.id}" }
       %p
-        =statement.language.name
+        %em= "in %s" % statement.language.name
       %p
         =statement.body
       %p.actions
         = link_to 'Edit', edit_problem_statement_path(@problem, statement)
         |
         = link_to 'Remove', [@problem, statement], :confirm => 'Are you sure?', :method => :delete
+
+%h2 Analyses
+
+%p= link_to 'New analysis', new_problem_analysis_path(@problem)
+
+%div#analyses
+  - @problem.analyses.each do |analysis|
+    %div.analysis{ :id => "analysis_#{analysis.id}" }
+      %p
+        %em= "by %s" % analysis.user_id
+      %p
+        = analysis.body
+      %p.actions
+        = link_to 'Edit', edit_problem_analysis_path(@problem, analysis)
+        |
+        = link_to 'Remove', [@problem, analysis], :confirm => 'Are you sure?', :method => :delete
+
 
