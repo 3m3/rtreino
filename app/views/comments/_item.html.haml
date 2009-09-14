@@ -1,0 +1,9 @@
+- content_tag_for(:tr, comment, :class => cycle(:odd, :even)) do
+  %td.body= h comment.try(:body)
+  %td.subject= h comment.try(:subject)
+  %td.actions
+    = link_to 'Show', comment_path(comment)
+    |
+    = link_to 'Edit', edit_comment_path(comment)
+    |
+    = link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete

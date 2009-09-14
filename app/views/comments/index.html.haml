@@ -1,0 +1,17 @@
+%h1.heading
+  = "Comments"
+  
+%p.actions
+  = link_to 'New Comment', new_comment_path
+  
+%table
+  %thead.header
+    %tr
+      %th.body= 'Body'
+      %th.subject= 'Comments'
+      %th.actions= 'Actions'
+  %tbody.items.comments
+    - @comments.each do |comment|
+      = render 'item', :comment => comment
+      
+= will_paginate(@comments)

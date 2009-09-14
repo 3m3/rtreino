@@ -1,0 +1,10 @@
+%h1.heading
+  = 'New Comment'
+  
+- semantic_form_for(@comment) do |form|
+  = render 'form', :form => form
+  - form.buttons do
+    = form.commit_button 'Create'
+    
+%p.actions
+  = link_to_function 'Cancel', "window.back()" 

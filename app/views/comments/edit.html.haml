@@ -1,0 +1,10 @@
+%h1.heading
+  = "Editing comment %s" % @comment.id
+  
+- semantic_form_for(@comment) do |form|
+  = render 'form', :form => form
+  - form.buttons do
+    = form.commit_button 'Update'
+    
+%p.actions
+  = link_to 'Cancel', comments_path

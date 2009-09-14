@@ -1,6 +1,6 @@
 class AnalysesController < InheritedResources::Base
   
-  actions :index, :show, :new, :edit, :create, :update, :destroy
+  actions :show, :new, :edit, :create, :update, :destroy
   respond_to :html, :js, :xml, :json
   belongs_to :problem
 

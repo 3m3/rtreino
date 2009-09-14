@@ -1,4 +1,8 @@
-div.statement, div.analysis {
+div.statement, div.analysis, div.comment {
   border: 1px solid gray;
   padding-left: 15px; 
   margin-left: 10px; }
+
+div.comment {
+  margin-bottom: 5px; 
+  margin-right: 5px; }

@@ -1,0 +1,18 @@
+%div.comment
+  %p
+    %b Subject:
+    = comment.subject
+    %em= "- by %s" % comment.user_id
+    %br
+    %b Body:
+    %br
+    = comment.body
+
+  %p.actions
+    = link_to 'Edit', edit_comment_path(comment)
+    |
+    = link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to 'Comment', new_comment_comment_path(comment)
+
+  = render :partial => comment.comments

@@ -1,0 +1,17 @@
+%h1.heading
+  = "Comment %s" % @comment.id
+  
+- content_tag_for(:dl, @comment) do
+  %dt.label= 'Body'
+  %dd.body= h @comment.try(:body)
+  %dt.label= 'Title'
+  %dd.title= h @comment.try(:title)
+  %dt.label= 'Commentable'
+  %dd.commentable_id= h @comment.try(:commentable_id)
+  %dt.label= 'Commentable type'
+  %dd.commentable_type= h @comment.try(:commentable_type)
+  
+%p.actions
+  = link_to 'Edit', edit_comment_path(@comment)
+  |
+  = link_to 'Index', comments_path
