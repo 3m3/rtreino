@@ -1,0 +1,10 @@
+%h1.heading
+  = "Editing user_session %s" % @user_session.id
+  
+- semantic_form_for(@user_session) do |form|
+  = render 'form', :form => form
+  - form.buttons do
+    = form.commit_button 'Update'
+    
+%p.actions
+  = link_to 'Cancel', user_sessions_path

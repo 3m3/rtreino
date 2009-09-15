@@ -39,6 +39,7 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 
+  config.gem 'authlogic', :version => ">= 2.0.9"
   config.gem 'haml'
   config.gem 'will_paginate'
   config.gem 'justinfrench-formtastic', :lib => 'formtastic', :source => 'http://gems.github.com'

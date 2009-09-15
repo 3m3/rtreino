@@ -28,6 +28,6 @@ config.action_mailer.delivery_method = :test
 # config.active_record.schema_format = :sql
 
 
-config.gem 'rspec'
-config.gem 'rspec-rails'
+config.gem 'rspec', :lib => false, :version => ">= 1.2.4" 
+config.gem 'rspec-rails', :lib => false, :version => ">= 1.2.4" 
 

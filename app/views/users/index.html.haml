@@ -1,0 +1,18 @@
+%h1.heading
+  = "Users"
+  
+%p.actions
+  = link_to 'New User', new_user_path
+  
+%table
+  %thead.header
+    %tr
+      %th.username= 'Username'
+      %th.email= 'Email'
+      %th.password= 'Password'
+      %th.actions= 'Actions'
+  %tbody.items.users
+    - @users.each do |user|
+      = render 'item', :user => user
+      
+= will_paginate(@users)
