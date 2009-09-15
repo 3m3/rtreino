@@ -1,6 +1,7 @@
 class CreateLanguages < ActiveRecord::Migration
   def self.up
     create_table :languages do |t|
+      t.string :abbreviation
       t.string :name
       
       t.timestamps

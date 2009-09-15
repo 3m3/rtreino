@@ -1,6 +1,6 @@
 class LanguagesController < InheritedResources::Base
   
-  actions :index, :show, :new, :edit, :create, :update, :destroy
+  actions :index, :show, :new, :edit, :create, :update
   respond_to :html, :js, :xml, :json
   
   protected

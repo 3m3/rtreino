@@ -4,6 +4,8 @@
 - content_tag_for(:dl, @language) do
   %dt.label= 'Name'
   %dd.name= h @language.try(:name)
+  %dt.label= 'Abbreviation'
+  %dd.name= h @language.try(:abbreviation)
   
 %p.actions
   = link_to 'Edit', edit_language_path(@language)

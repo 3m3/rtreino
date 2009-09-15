@@ -1,8 +1,7 @@
 - content_tag_for(:tr, language, :class => cycle(:odd, :even)) do
+  %td.abbreviation= h language.try(:abbreviation)
   %td.name= h language.try(:name)
   %td.actions
     = link_to 'Show', language_path(language)
     |
     = link_to 'Edit', edit_language_path(language)
-    |
-    = link_to 'Destroy', language, :confirm => 'Are you sure?', :method => :delete
