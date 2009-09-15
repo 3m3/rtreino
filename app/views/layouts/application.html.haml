@@ -26,6 +26,17 @@
 
       %br
 
+      %div#menu
+        %b Krasnaia Pravda!
+        %br
+        = link_to "Problems", problems_path
+        |
+        = link_to "Levels", levels_path
+        |
+        = link_to "Users", users_path
+        %hr
+
+
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
       

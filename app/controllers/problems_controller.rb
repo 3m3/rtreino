@@ -5,7 +5,10 @@ class ProblemsController < InheritedResources::Base
   respond_to :html, :js, :xml, :json
 
   def create
-    create! { new_problem_path(@problem) }
+    create! do |success, failure|
+      failure.html { render new_problem_path(@problem) }
+      success.html { redirect_to edit_problem_path(@problem) }
+    end
   end
 
   def update
