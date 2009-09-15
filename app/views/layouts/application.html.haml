@@ -3,7 +3,7 @@
   
   %head
     %title
-      = h(yield(:title) || "Untitled")
+      = h(yield(:title) || "Krasnaia Pravda -- Treino para competições de programação e matemática")
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     = stylesheet_link_tag 'application'
     = stylesheet_link_tag 'custom'
@@ -16,6 +16,9 @@
     #container
       %div#user_nav
         - if current_user
+          %b
+            = current_user.username
+          |
           = link_to "Edit Profile", edit_user_path(:current)
           |
           = link_to "Logout", logout_path

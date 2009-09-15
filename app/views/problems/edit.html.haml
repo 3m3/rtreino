@@ -20,7 +20,7 @@
       %p
         %em= "in %s" % statement.language.name
       %p
-        =statement.body
+        ~ statement.body_html
       %p.actions
         = link_to 'Edit', edit_problem_statement_path(@problem, statement)
         |
@@ -35,8 +35,7 @@
     %div.analysis{ :id => "analysis_#{analysis.id}" }
       %p
         %em= "by %s" % analysis.user.username
-      %p
-        = analysis.body.gsub("\n", '<br />')
+      ~ analysis.body_html
       %p.actions
         - if current_user == analysis.user
           = link_to 'Edit', edit_problem_analysis_path(@problem, analysis)
