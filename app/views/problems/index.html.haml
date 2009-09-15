@@ -11,7 +11,8 @@
       %th.name= 'Name'
       %th.source= 'Source'
       %th.level_id= 'Level'
-      %th.actions= 'Actions'
+      - if logged?
+        %th.actions= 'Actions'
   %tbody.items.problems
     - @problems.each do |problem|
       = render 'item', :problem => problem

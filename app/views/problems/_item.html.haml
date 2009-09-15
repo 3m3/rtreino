@@ -3,9 +3,10 @@
   %td.name= h problem.try(:name)
   %td.source= h problem.try(:source)
   %td.level_id= h level_name_of(problem)
-  %td.actions
-    = link_to 'Show', problem_path(problem)
-    |
-    = link_to 'Edit', edit_problem_path(problem)
-    |
-    = link_to 'Destroy', problem, :confirm => 'Are you sure?', :method => :delete
+  - if logged?
+    %td.actions
+      = link_to 'Show', problem_path(problem)
+      |
+      = link_to 'Edit', edit_problem_path(problem)
+      |
+      = link_to 'Destroy', problem, :confirm => 'Are you sure?', :method => :delete

@@ -1,10 +1,11 @@
 class ProblemsController < InheritedResources::Base
+  before_filter :login_required, :except => :index
   
   actions :index, :show, :new, :edit, :create, :update, :destroy
   respond_to :html, :js, :xml, :json
 
   def create
-    create! { edit_problem_path(@problem) }
+    create! { new_problem_path(@problem) }
   end
 
   def update
