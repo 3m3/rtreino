@@ -14,7 +14,13 @@ class ApplicationController < ActionController::Base
   protected
 
     def login_required  
-      unless defined?(current_user)
+      unless current_user.nil?
+        unless current_user.confirmation_ok?
+          flash[:error] = "Waiting confirmantion of your account!"
+          redirect_to root_path
+          return false
+        end
+      else
         flash[:error] = "You need to be logged in!"
         redirect_to login_path
         false
