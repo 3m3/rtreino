@@ -3,4 +3,7 @@
   = form.input :email
   = form.input :password, :as => :password
   = form.input :password_confirmation, :as => :password
+  - if logged? && current_user.admin?
+    = form.input :confirmation_ok
+    = form.input :admin
 

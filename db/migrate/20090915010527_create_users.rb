@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :passoword_salt
       t.string :persistence_token
       t.boolean :confirmation_ok
+      t.boolean :admin
       
       t.timestamps
     end
