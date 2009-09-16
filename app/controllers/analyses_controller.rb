@@ -1,6 +1,6 @@
 class AnalysesController < InheritedResources::Base
   before_filter :login_required
-  before_filter :authorize, :except => :create
+  before_filter :authorize, :except => [:new, :create]
   
   actions :show, :new, :edit, :create, :update
   respond_to :html, :js, :xml, :json
