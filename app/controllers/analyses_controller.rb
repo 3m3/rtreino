@@ -28,7 +28,7 @@ class AnalysesController < InheritedResources::Base
 
   def authorize
     analysis = Analysis.find(params[:id])
-    if current_user.id != analysis.user_id
+    if not current_user.admin? && current_user.id != analysis.user_id
       flash[:error] = "Unauthorized access!"
       redirect_to edit_problem_path(analysis.problem)
       false

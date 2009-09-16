@@ -37,7 +37,7 @@
         %em= "by %s" % analysis.user.username
       ~ analysis.body_html
       %p.actions
-        - if current_user == analysis.user
+        - if current_user == analysis.user || current_user.admin?
           = link_to 'Edit', edit_problem_analysis_path(@problem, analysis)
           |
         = link_to 'New comment', new_analysis_comment_path(analysis)

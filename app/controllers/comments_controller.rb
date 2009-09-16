@@ -46,7 +46,7 @@ class CommentsController < InheritedResources::Base
 
   def authorize
     comment = Comment.find(params[:id])
-    if current_user.id != comment.user_id
+    if not current_user.admin? && current_user.id != comment.user_id
       flash[:error] = "Unauthorized access!"
       redirect_to root_path
       false
