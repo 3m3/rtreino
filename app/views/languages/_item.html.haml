@@ -2,6 +2,7 @@
   %td.abbreviation= h language.try(:abbreviation)
   %td.name= h language.try(:name)
   %td.actions
-    = link_to 'Show', language_path(language)
-    |
-    = link_to 'Edit', edit_language_path(language)
+    - unless current_user.nil?
+      = link_to 'Show', language_path(language)
+      |
+      = link_to 'Edit', edit_language_path(language)
