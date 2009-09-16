@@ -16,5 +16,5 @@
   %tbody.items.problems
     - @problems.each do |problem|
       = render 'item', :problem => problem
-      
+
 = will_paginate(@problems)

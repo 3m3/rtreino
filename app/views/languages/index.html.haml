@@ -1,9 +1,9 @@
 %h1.heading
   = "Languages"
-  
-%p.actions
-  = link_to 'New Language', new_language_path
-  
+
+  %p.actions
+    = link_to 'New Language', new_language_path
+
 %table
   %thead.header
     %tr
@@ -13,5 +13,5 @@
   %tbody.items.languages
     - @languages.each do |language|
       = render 'item', :language => language
-      
+
 = will_paginate(@languages)
