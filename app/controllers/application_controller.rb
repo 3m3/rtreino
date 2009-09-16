@@ -11,6 +11,16 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  protected
+
+    def login_required  
+      unless defined?(current_user)
+        flash[:error] = "You need to be logged in!"
+        redirect_to login_path
+        false
+      end
+    end
+
   private
 
   def current_user_session
