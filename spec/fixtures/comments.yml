@@ -1,5 +1,5 @@
 basic:
   body: Lorem ipsum dolor sit amet...
-  title: Hello
+  subject: Subject
   commentable_id: 
   commentable_type: Hello

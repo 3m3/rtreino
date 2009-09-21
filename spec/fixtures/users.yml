@@ -1,4 +1,8 @@
 basic:
   username: Hello
   email: Hello
-  password: Hello
+  confirmation_ok: true
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("benrocks" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  

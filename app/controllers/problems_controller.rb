@@ -1,5 +1,5 @@
 class ProblemsController < InheritedResources::Base
-  before_filter :login_required, :except => :index
+  before_filter :login_required, :except => [:index, :show]
 
   actions :index, :show, :new, :edit, :create, :update, :destroy
   respond_to :html, :js, :xml, :json
