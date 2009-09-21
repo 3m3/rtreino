@@ -1,6 +1,6 @@
 class AnalysesController < InheritedResources::Base
   before_filter :login_required
-  before_filter :authorize, :except => [:new, :create, :index]
+  before_filter :authorize, :except => [:new, :create, :index, :show]
   
   actions :show, :new, :edit, :create, :update
   respond_to :html, :js, :xml, :json
@@ -28,7 +28,7 @@ class AnalysesController < InheritedResources::Base
 
   def authorize
     analysis = Analysis.find(params[:id])
-    if not current_user.admin? && current_user.id != analysis.user_id
+    if current_user.id != analysis.user_id
       flash[:error] = "Unauthorized access!"
       redirect_to edit_problem_path(analysis.problem)
       false

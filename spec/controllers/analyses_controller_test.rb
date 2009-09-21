@@ -4,19 +4,37 @@ describe AnalysesController do
   fixtures :all
 
   integrate_views
+ 
+  before(:each) do
+    activate_authlogic
+    UserSession.create User.first
+    @problem = Problem.first
+  end
+
+  def myget(action, things={})
+    things[:problem_id] = @problem.id
+    get action, things
+  end 
   
+  def mypost(action, things={})
+    things[:problem_id] = @problem.id
+    post action, things 
+  end
+
   it "index action should render index template" do
+    pending
     get :index
     response.should render_template(:index)
   end
-  
+ 
   it "show action should render show template" do
-    get :show, :id => Analysis.first
+    analysis = Analysis.first
+    myget :show, :id => analysis
     response.should render_template(:show)
   end
   
   it "new action should render new template" do
-    get :new
+    myget :new
     response.should render_template(:new)
   end
   
@@ -25,7 +43,7 @@ describe AnalysesController do
     @analysis.stub!(:valid?).and_return(false)
     Analysis.stub!(:new).and_return(@analysis)
     lambda {
-      post :create, :analysis => {}      
+      mypost :create, :analysis => {}
     }.should change(Analysis, :count).by(0)
   end
   
@@ -34,23 +52,24 @@ describe AnalysesController do
     @analysis.stub!(:valid?).and_return(true)
     Analysis.stub!(:new).and_return(@analysis)
     lambda {
-      post :create, :analysis => {}      
+      mypost :create, :analysis => {}      
     }.should change(Analysis, :count).by(1)
   end
   
-  it "edit action should render edit template" do
-    get :edit, :id => Analysis.first
+  it "edit action should render edit template when the user is editing his stuff" do
+    myget :edit, :id => Analysis.first
     response.should render_template(:edit)
   end
   
   it "update action should redirect when model is valid" do
-    put :update, :id => Analysis.first, :analysis => {}
-    response.should redirect_to(analysis_url(assigns[:analysis]))
+    put :update, :id => Analysis.first, :analysis => {}, :problem_id => @problem.id
+    response.should redirect_to(edit_problem_url(@problem))
   end
   
   it "destroy action should destroy model and redirect to index action" do
+    pending
     lambda {
-      delete :destroy, :id => Analysis.first
+      delete :destroy, :id => Analysis.first, :problem_id => @problem.id
     }.should change(Analysis, :count).by(-1)
     response.should redirect_to(analyses_url)
   end
