@@ -1,3 +1,4 @@
 basic:
-  language_id: 1
+  language_id: <%= Language.first.id %>
+  problem_id: <%= Problem.first.id %>
   body: Lorem ipsum dolor sit amet...

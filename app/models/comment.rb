@@ -5,6 +5,8 @@ class Comment < ActiveRecord::Base
   has_many :comments, :as => :commentable
   belongs_to :user
 
+  validates_presence_of :commentable_id
+
   def body_html
     Txt2Tags.generate self.body, :html
   end

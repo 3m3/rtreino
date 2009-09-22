@@ -3,14 +3,22 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe CommentsController do
   fixtures :all
 
+  before(:each) do
+    activate_authlogic
+    UserSession.create User.first
+    @problem = Problem.first
+  end
+
   integrate_views
   
   it "index action should render index template" do
+    pending
     get :index
     response.should render_template(:index)
   end
   
   it "show action should render show template" do
+    pending
     get :show, :id => Comment.first
     response.should render_template(:show)
   end

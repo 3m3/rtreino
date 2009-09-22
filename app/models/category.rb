@@ -1,5 +1,6 @@
 class Category < ActiveRecord::Base
   belongs_to :category
+  validates_presence_of :name
   
   def long_name
     if self.category_id.nil? or self.id == self.category_id

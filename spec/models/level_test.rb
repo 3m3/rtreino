@@ -4,6 +4,6 @@ describe Level do
   fixtures :levels
 
   it "should be valid" do
-    Comment.new.should be_valid
+    Level.new.should be_valid
   end
 end

@@ -1,6 +1,5 @@
 basic:
-  id: 1
   code: Hello
   name: Hello
   source: Hello
-  level_id: 1
+  level_id: <%= Level.first.id %>

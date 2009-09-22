@@ -9,12 +9,7 @@ describe UsersController do
     get :index
     response.should render_template(:index)
   end
-  
-  it "show action should render show template" do
-    get :show, :id => User.first
-    response.should render_template(:show)
-  end
-  
+    
   it "new action should render new template" do
     get :new
     response.should render_template(:new)
@@ -38,20 +33,34 @@ describe UsersController do
     }.should change(User, :count).by(1)
   end
   
-  it "edit action should render edit template" do
-    get :edit, :id => User.first
-    response.should render_template(:edit)
-  end
-  
-  it "update action should redirect when model is valid" do
-    put :update, :id => User.first, :user => {}
-    response.should redirect_to(user_url(assigns[:user]))
-  end
-  
-  it "destroy action should destroy model and redirect to index action" do
-    lambda {
-      delete :destroy, :id => User.first
-    }.should change(User, :count).by(-1)
-    response.should redirect_to(users_url)
+  describe "Authenticated" do
+    before(:each) do 
+      activate_authlogic
+      UserSession.create User.first
+    end  
+
+    it "show action should render show template" do
+      get :show, :id => User.first
+      response.should render_template(:show)
+    end
+
+
+    it "edit action should render edit template" do
+      get :edit, :id => User.first
+      response.should render_template(:edit)
+    end
+
+    it "update action should redirect when model is valid" do
+      put :update, :id => User.first, :user => {}
+      response.should redirect_to(root_url)
+    end
+
+    it "destroy action should destroy model and redirect to index action" do
+      pending
+      lambda {
+        delete :destroy, :id => User.first
+      }.should change(User, :count).by(-1)
+      response.should redirect_to(users_url)
+    end
   end
 end

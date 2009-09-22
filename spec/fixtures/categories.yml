@@ -1,3 +1,6 @@
 basic:
   name: Hello
-  category_id: 1
+
+second:
+  name: World
+  category_id: <%= Category.first.id %>
