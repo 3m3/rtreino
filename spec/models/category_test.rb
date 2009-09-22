@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe Category do
 
   it "should not be valid" do
-    Category.new.should_not be_valid
+    Factory.build(:invalid_category).should_not be_valid
   end
 
   it "should be valid" do

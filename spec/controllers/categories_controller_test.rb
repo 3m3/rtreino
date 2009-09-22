@@ -42,6 +42,7 @@ describe CategoriesController do
       lambda {
         post :create, :category => {}      
       }.should change(Category, :count).by(1)
+      response.should redirect_to(edit_category_url(assigns[:category]))
     end
 
     it "edit action should render edit template" do
@@ -51,7 +52,7 @@ describe CategoriesController do
 
     it "update action should redirect when model is valid" do
       put :update, :id => @category, :category => {}
-      response.should redirect_to(category_url(assigns[:category]))
+      response.should redirect_to(edit_category_url(assigns[:category]))
     end
 
     it "destroy action should destroy model and redirect to index action" do

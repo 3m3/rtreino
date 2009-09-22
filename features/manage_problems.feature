@@ -3,7 +3,8 @@ Feature: Manage problems
   The user
   wants create and edit problems
   
-  Scenario: Register new problem
+  @pending Scenario: Register new problem
+    Pending
     Given I am on the new problem page
     When I fill in "Code" with "code 1"
     And I fill in "Name" with "name 1"
@@ -13,7 +14,8 @@ Feature: Manage problems
     And I should see "name 1"
     And I should see "source 1"
 
-  Scenario: Register new problem with category and level
+  @pending Scenario: Register new problem with category and level
+    Pending
     Given the following categories:
       |name  |
       |Graph |
@@ -49,7 +51,7 @@ Feature: Manage problems
     Then I should not see "Graph"
     And I should see "Ad-hoc"
 
-  Scenario: Delete problem
+  @pending Scenario: Delete problem
     Given the following problems:
       |code|name|source|
       |code 1|name 1|source 1|

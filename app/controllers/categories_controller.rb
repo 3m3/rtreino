@@ -3,6 +3,18 @@ class CategoriesController < InheritedResources::Base
   
   actions :index, :show, :new, :edit, :create, :update, :destroy
   respond_to :html, :js, :xml, :json
+
+
+  def create
+    create! do |success, failure|
+      failure.html { render new_category_path(@category) }
+      success.html { redirect_to edit_category_path(@category) }
+    end
+  end
+
+  def update
+    update! { edit_category_path(@category) }
+  end
   
   protected
     

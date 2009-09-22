@@ -18,3 +18,10 @@ en:
         user_id: "Por enquanto: Renato - 2; André - 3; Abela - 4; Phyllipe - 5; Raul - 6; Ramon - 7; Japa - 8; Mariana - 9;"
       comment:
         user_id: "Por enquanto: Renato - 2; André - 3; Abela - 4; Phyllipe - 5; Raul - 6; Ramon - 7; Japa - 8; Mariana - 9;"
+
+  flash:
+    user_sessions:
+      create:
+        notice: "Login successful!"
+      destroy:
+        notice: "Succefully logged out."

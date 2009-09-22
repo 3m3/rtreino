@@ -18,6 +18,12 @@ module NavigationHelpers
     when /the new category page/
       new_category_path
 
+    when /the edit category page/
+      edit_category_path
+
+    when /login page/
+      login_path
+
     
     # Add more mappings here.
     # Here is a more fancy example:

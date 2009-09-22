@@ -10,7 +10,7 @@ class UserSessionsController < InheritedResources::Base
   def destroy
     @user_session = UserSession.find
     @user_session.destroy
-    flash[:notice] = "Succefully logged out."
+    flash[:notice] = t('flash.user_sessions.destroy.notice')
     redirect_to root_url
   end
 

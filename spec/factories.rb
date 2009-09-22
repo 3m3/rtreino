@@ -9,6 +9,9 @@ Factory.define :level do |f|
   f.name "Name"
 end
 
+Factory.define :invalid_category, :class => Category do |f|
+end
+
 Factory.define :category_single, :class => Category do |f|
   f.sequence(:name) { |n| "Single#{n}" }
 end
