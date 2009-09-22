@@ -1,4 +1,5 @@
 class CategoriesController < InheritedResources::Base
+  before_filter :login_required
   
   actions :index, :show, :new, :edit, :create, :update, :destroy
   respond_to :html, :js, :xml, :json

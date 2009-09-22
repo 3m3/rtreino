@@ -12,6 +12,12 @@ module NavigationHelpers
       new_problem_path    
     when /the homepage/
       '/'
+    when /the new user_session page/
+      new_user_session_path
+
+    when /the new category page/
+      new_category_path
+
     
     # Add more mappings here.
     # Here is a more fancy example:
