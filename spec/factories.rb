@@ -21,6 +21,9 @@ Factory.define :category do |f|
   f.association :category, :factory => :category_single
 end
 
+
+Factory.define :invalid_user, :class => User do
+end
 Factory.define :user do |f|
   f.sequence(:username) { |n| "username#{n}" }
   f.password "password" 
@@ -36,7 +39,7 @@ Factory.define :level do |f|
   f.sequence(:name) { |n| "level#{n}" }
 end
 
-Factory.define :invalid_language do |f|
+Factory.define :invalid_language, :class => Language do |f|
 end
 
 Factory.define :language do |f|

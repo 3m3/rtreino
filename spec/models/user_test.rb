@@ -1,9 +1,11 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe User do
-  fixtures :users
-
   it "should not be valid" do
-    User.new.should_not be_valid
+    Factory.build(:invalid_user).should_not be_valid
+  end
+
+  it "should be valid" do
+    Factory.create(:user).should be_valid
   end
 end
