@@ -1,9 +1,11 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Level do
-  fixtures :levels
-
+  it "should not be valid" do
+    Factory.build(:invalid_level).should_not be_valid
+  end
+  
   it "should be valid" do
-    Level.new.should be_valid
+    Factory(:level).should be_valid
   end
 end

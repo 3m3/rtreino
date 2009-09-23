@@ -33,6 +33,7 @@ describe CategoriesController do
       lambda {
         post :create, :category => {}      
       }.should change(Category, :count).by(0)
+      response.should redirect_to(categories_path)
     end
 
     it "create action should redirect when model is valid" do

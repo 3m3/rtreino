@@ -2,7 +2,18 @@ class LevelsController < InheritedResources::Base
   
   actions :index, :show, :new, :edit, :create, :update, :destroy
   respond_to :html, :js, :xml, :json
-  
+
+  def create
+    create! do |success, failure|
+      failure.html { render new_level_path(@level) }
+      success.html { redirect_to edit_level_path(@level) }
+    end
+  end
+
+  def update
+    update! { edit_level_path(@level) }
+  end
+
   protected
     
     def collection

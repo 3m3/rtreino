@@ -12,15 +12,18 @@ module NavigationHelpers
       new_problem_path    
     when /the homepage/
       '/'
+    when /the new level page/
+      new_level_path
+    when /the edit level page/
+      edit_level_path
+    when /the levels page/
+      levels_path
     when /the new user_session page/
       new_user_session_path
-
     when /the new category page/
       new_category_path
-
     when /the edit category page/
       edit_category_path
-
     when /login page/
       login_path
 

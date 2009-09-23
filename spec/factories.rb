@@ -27,3 +27,11 @@ Factory.define :user do |f|
   f.password_confirmation { |p| p.password }
   f.sequence(:email) { |n| "username#{n}@test.com" }
 end
+
+
+Factory.define :invalid_level, :class => Level do
+end
+
+Factory.define :level do |f|
+  f.sequence(:name) { |n| "level#{n}" }
+end

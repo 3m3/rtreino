@@ -14,14 +14,13 @@ Then /^I should see the following categories:$/ do |expected_categories_table|
 end
 
 Given /^I have some categories$/ do
-  @categories = []
-  10.times { @categories << Factory.create(:category) }
+  10.times { Factory.create(:category) }
 end
 
 When /^I select the first category from "([^\"]*)"$/ do |field|
-  select(@categories[0].long_name.gsub(">", "&gt;"), :from => field) 
+  select(Category.first.long_name.gsub(">", "&gt;"), :from => field) 
 end
 
 Then /^first category should be selected from "([^\"]*)"$/ do |field|
-  field_labeled(field).element.search(".//option[@selected = 'selected']").inner_html.should =~ /#{@categories[0].long_name.gsub(">", "&gt;")}/
+  field_labeled(field).element.search(".//option[@selected = 'selected']").inner_html.should =~ /#{Category.first.long_name.gsub(">", "&gt;")}/
 end
