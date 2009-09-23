@@ -58,4 +58,46 @@ describe LanguagesController do
       pending
     end
   end
+  describe "not Authenticated" do 
+    before(:each) do
+      @language = Factory.create(:language)
+    end
+
+    it "new action should redirect to login page" do
+      get :new
+      response.should redirect_to(login_path)
+    end
+
+    it "create action should redirect to login page" do
+      language = Language.new
+      language.stub!(:valid?).and_return(false)
+      Language.stub!(:new).and_return(language)
+      lambda {
+        post :create, :language => {}      
+      }.should change(Language, :count).by(0)
+      response.should redirect_to(login_path)
+    end
+
+    it "create action should redirect to login page" do
+      language = Language.new
+      language.stub!(:valid?).and_return(true)
+      Language.stub!(:new).and_return(language)
+      lambda {
+        post :create, :language => {}      
+      }.should change(Language, :count).by(0)
+      response.should redirect_to(login_path)
+    end
+
+    it "edit action should redirect to login page" do
+      get :edit, :id => @language
+      response.should redirect_to(login_path)
+    end
+
+    it "update action should redirect to login page" do
+      put :update, :id => @language, :language => {}
+      response.should redirect_to(login_path)
+    end
+
+  end
+
 end
