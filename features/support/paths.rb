@@ -12,6 +12,12 @@ module NavigationHelpers
       new_problem_path    
     when /the homepage/
       '/'
+    when /the languages page/
+      languages_path
+    when /the new language page/
+      new_language_path
+    when /the edit language page/
+      edit_language_path
     when /the new level page/
       new_level_path
     when /the edit level page/

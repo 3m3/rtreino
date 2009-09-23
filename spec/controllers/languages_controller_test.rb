@@ -1,10 +1,8 @@
 require File.dirname(__FILE__) + '/../spec_helper'
  
 describe LanguagesController do
-  fixtures :all
-
   integrate_views
-  
+
   it "index action should render index template" do
     get :index
     response.should render_template(:index)
@@ -17,9 +15,8 @@ describe LanguagesController do
 
   describe "Authenticated" do 
     before(:each) do
-      activate_authlogic
-      UserSession.create User.first
-      @problem = Problem.first
+      execute_login
+      @language = Factory.create(:language)
     end
 
     it "new action should render new template" do
@@ -28,31 +25,33 @@ describe LanguagesController do
     end
 
     it "create action should render new template when model is invalid" do
-      @language = Language.new
-      @language.stub!(:valid?).and_return(false)
-      Language.stub!(:new).and_return(@language)
+      language = Language.new
+      language.stub!(:valid?).and_return(false)
+      Language.stub!(:new).and_return(language)
       lambda {
         post :create, :language => {}      
       }.should change(Language, :count).by(0)
+      response.should redirect_to(languages_path)
     end
 
     it "create action should redirect when model is valid" do
-      @language = Language.new
-      @language.stub!(:valid?).and_return(true)
-      Language.stub!(:new).and_return(@language)
+      language = Language.new
+      language.stub!(:valid?).and_return(true)
+      Language.stub!(:new).and_return(language)
       lambda {
         post :create, :language => {}      
       }.should change(Language, :count).by(1)
+      response.should redirect_to(edit_language_url(assigns[:language]))
     end
 
     it "edit action should render edit template" do
-      get :edit, :id => Language.first
+      get :edit, :id => @language
       response.should render_template(:edit)
     end
 
     it "update action should redirect when model is valid" do
-      put :update, :id => Language.first, :language => {}
-      response.should redirect_to(language_url(assigns[:language]))
+      put :update, :id => @language, :language => {}
+      response.should redirect_to(edit_language_url(assigns[:language]))
     end
 
     it "destroy action raise error" do

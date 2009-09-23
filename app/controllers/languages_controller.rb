@@ -4,6 +4,17 @@ class LanguagesController < InheritedResources::Base
   actions :index, :show, :new, :edit, :create, :update
   respond_to :html, :js, :xml, :json
 
+  def create
+    create! do |success, failure|
+      failure.html { render new_language_path(@language) }
+      success.html { redirect_to edit_language_path(@language) }
+    end
+  end
+
+  def update
+    update! { edit_language_path(@language) }
+  end
+
   protected
 
   def collection
