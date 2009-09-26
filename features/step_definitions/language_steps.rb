@@ -20,6 +20,10 @@ When /^I edit the (\d+)(?:st|nd|rd|th) language$/ do |pos|
   end
 end
 
+When /^I select the first language from "([^\"]*)"$/ do |field|
+  select(Language.first.name, :from => field) 
+end
+
 Then /^I should see the following languages:$/ do |expected_languages_table|
   expected_languages_table.diff!(table_at('table').to_a)
 end

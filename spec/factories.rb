@@ -54,3 +54,37 @@ Factory.define :language do |f|
   end
   f.name { |l| l.abbreviation }
 end
+
+
+Factory.define :invalid_statement, :class => Statement do |f|
+end
+
+Factory.define :statement do |f|
+  f.association :language
+  f.association :problem
+  f.body "text"
+end
+
+Factory.define :invalid_analysis, :class => Analysis do |f|
+end
+Factory.define :analysis do |f|
+  f.association :user
+  f.association :problem
+  f.body "text"
+end
+
+
+Factory.define :invalid_comment, :class => Comment do |f|
+
+end
+Factory.define :comment_from_analysis, :class => Comment do |f|
+  f.body 'text'
+  f.association :commentable, :factory => :analysis
+  f.association :user
+end
+
+Factory.define :comment_from_comment, :class => Comment do |f|
+  f.body 'text 2'
+  f.association :commentable, :factory => :comment_from_analysis
+  f.association :user
+end

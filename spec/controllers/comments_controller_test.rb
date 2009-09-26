@@ -1,16 +1,20 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe CommentsController do
-  fixtures :all
 
   before(:each) do
-    activate_authlogic
-    UserSession.create User.first
+    execute_login
   end
 
   integrate_views
 
   describe "Analysis" do
+
+    before(:each) do
+      @comment = Factory.create(:comment_from_analysis, :user => @user)
+      @analysis = @comment.commentable
+    end
+
     it "index action should render index template" do
       pending
       get :index
@@ -29,38 +33,32 @@ describe CommentsController do
     end
 
     it "create action should render new template when model is invalid" do
-      @comment = Comment.new
-      @comment.stub!(:valid?).and_return(false)
-      Comment.stub!(:new).and_return(@comment)
+      comment = Comment.new
+      comment.stub!(:valid?).and_return(false)
+      Comment.stub!(:new).and_return(comment)
       lambda {
         post :create, :comment => {}      
       }.should change(Comment, :count).by(0)
     end
 
     it "create action should redirect when model is valid" do
-      @comment = Comment.new
-      @comment.stub!(:valid?).and_return(true)
-      Comment.stub!(:new).and_return(@comment)
+      comment = Comment.new
+      comment.stub!(:valid?).and_return(true)
+      Comment.stub!(:new).and_return(comment)
       lambda {
         post :create, :comment => {}      
       }.should change(Comment, :count).by(1)
     end
 
     it "edit action should render edit template" do
-      get :edit, :id => Comment.first
+      get :edit, :id => @comment.id
       response.should render_template(:edit)
     end
 
     it "update action should redirect when model is valid" do
-      put :update, :id => Comment.first, :comment => {}
-      response.should redirect_to(comment_url(assigns[:comment]))
+      put :update, :id => @comment, :comment => {}
+      response.should redirect_to(edit_problem_url(@analysis.problem))
     end
 
-    it "destroy action should destroy model and redirect to index action" do
-      lambda {
-        delete :destroy, :id => Comment.first
-      }.should change(Comment, :count).by(-1)
-      response.should redirect_to(comments_url)
-    end
   end
 end

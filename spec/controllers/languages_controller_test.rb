@@ -3,6 +3,10 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe LanguagesController do
   integrate_views
 
+  before :each do 
+    @language = Factory.create(:language)
+  end
+
   it "index action should render index template" do
     get :index
     response.should render_template(:index)

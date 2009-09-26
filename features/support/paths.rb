@@ -10,8 +10,50 @@ module NavigationHelpers
 
     when /the new problem page/
       new_problem_path    
+    when /the edit problem page/
+      edit_problem_path
+    when /the edit page of some problem that has only one analysis with one comment/
+      @comment = Factory.create(:comment_from_analysis)
+      @analysis = @comment.commentable
+      @problem = @analysis.problem
+      edit_problem_path(@problem)
+    when /the edit page of some problem that has only one analysis that I commented/
+      @comment = Factory.create(:comment_from_analysis, :user => @user)
+      @analysis = @comment.commentable
+      @problem = @analysis.problem
+      edit_problem_path(@problem)
+    when /the edit page of some problem that has only one analysis/
+      @analysis = Factory.create(:analysis)
+      @problem = @analysis.problem
+      edit_problem_path(@problem)
+    when /the edit page of some problem/
+      @problem = Factory.create(:problem)
+      edit_problem_path(@problem)
     when /the homepage/
       '/'
+    when /the new comment page/
+      new_comment_path
+    when /the new comment of analysis page/
+      new_analysis_comment_path
+    when /the new comment of comment page/
+      new_comment_comment_path
+    when /the new analysis page/
+      new_analysis_path
+
+    when /the new statement page/
+      new_statement_path
+    when /the new statement of problem page/
+      new_problem_statement_path(@problem)
+    when /the edit statement of problem page/
+      @statement = Factory.create(:statement)
+      @problem = @statement.problem
+      edit_problem_statement_path(@problem, @statement)
+    when /the new analysis of problem page/
+      new_problem_analysis_path(@problem)
+    when /the edit my analysis of problem page/
+      @analysis = Factory.create(:analysis, :user => @user)
+      @problem = @analysis.problem
+      edit_problem_analysis_path(@problem, @analysis)
     when /the languages page/
       languages_path
     when /the new language page/

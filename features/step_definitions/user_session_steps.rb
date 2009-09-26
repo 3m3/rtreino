@@ -1,9 +1,13 @@
-def register_user
-  @user ||= Factory.create(:user, :confirmation_ok => true)
+def register_user(as_admin=false)
+  if as_admin
+    @user ||= Factory.create(:user, :confirmation_ok => true, :admin => true)
+  else
+    @user ||= Factory.create(:user, :confirmation_ok => true)
+  end
 end
 
-def login
-  register_user
+def login(as_admin=false)
+  register_user(as_admin)
   visit path_to("the homepage")
   response.should contain("Login")
   click_link "Login"
@@ -21,6 +25,10 @@ end
 
 When /^I login$/ do
   login
+end
+
+Given /^I login as admin$/ do
+  login(true)
 end
 
 When /^I am logged in$/ do

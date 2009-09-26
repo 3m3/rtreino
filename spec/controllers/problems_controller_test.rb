@@ -1,9 +1,12 @@
 require File.dirname(__FILE__) + '/../spec_helper'
  
 describe ProblemsController do
-  fixtures :all
-
   integrate_views
+
+  before :each do
+    @problem = Factory.create(:problem)  
+  end
+
   describe "not Authenticated" do 
    
     it "index action should render index template" do
@@ -12,15 +15,16 @@ describe ProblemsController do
     end
   
     it "show action should render show template" do
-      get :show, :id => Problem.first
+      get :show, :id => @problem.id.to_s
       response.should render_template(:show)
     end
+
   end
  
   describe "Authenticated " do
+
     before(:each) do 
-      activate_authlogic
-      UserSession.create User.first
+      execute_login
     end  
   
     it "new action should render new template" do

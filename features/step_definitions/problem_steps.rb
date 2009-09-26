@@ -2,6 +2,10 @@ Given /^the following problems:$/ do |problems|
   Problem.create!(problems.hashes)
 end
 
+Given /^I have some problems$/ do
+  10.times { Factory.create(:problem) }
+end
+
 When /^I delete the (\d+)(?:st|nd|rd|th) problem$/ do |pos|
   visit problems_url
   within("table > tr:nth-child(#{pos.to_i+1})") do
