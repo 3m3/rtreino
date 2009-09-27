@@ -21,7 +21,8 @@ class ProblemsController < InheritedResources::Base
     paginate_options ||= {}
     paginate_options[:page] ||= (params[:page] || 1)
     paginate_options[:per_page] ||= (params[:per_page] || 20)
-    @problems ||= end_of_association_chain.paginate(paginate_options)
+    @problems ||= end_of_association_chain.find(:all, :order => 'source, code').paginate(paginate_options)
+    @problems_sources = @problems.group_by { |p| p.source }
   end
 
 end

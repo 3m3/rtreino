@@ -13,6 +13,20 @@ describe ProblemsController do
       get :index
       response.should render_template(:index)
     end
+
+    it "index action should return problems sorted first by source and after by code" do
+      Problem.delete_all
+
+      expected = []
+      problem2 = Factory.create(:problem, :source => 'B', :code => 'D')
+      problem1 =Factory.create(:problem, :source => 'A', :code => 'A')
+      expected << problem1
+      expected << problem2
+
+      get :index
+
+      assigns[:problems].should eql(expected)
+    end
   
     it "show action should render show template" do
       get :show, :id => @problem.id.to_s

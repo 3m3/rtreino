@@ -3,18 +3,21 @@
   
 %p.actions
   = link_to 'New Problem', new_problem_path
-  
-%table
-  %thead.header
-    %tr
-      %th.code= 'Code'
-      %th.name= 'Name'
-      %th.source= 'Source'
-      %th.level_id= 'Level'
-      - if logged?
-        %th.actions= 'Actions'
-  %tbody.items.problems
-    - @problems.each do |problem|
-      = render 'item', :problem => problem
+
+
+- @problems_sources.keys.sort.each do |k|
+  %h3 
+    %em= k
+  %table{ :style => 'margin-left: 10px;' }
+    %thead.header
+      %tr
+        %th.problem_code= 'Code'
+        %th.problem_name= 'Name'
+        %th.problem_level_id= 'Level'
+        - if logged?
+          %th.actions= 'Actions'
+      %tbody.items.problems
+        - @problems_sources[k].each do |problem|
+          = render 'item', :problem => problem
 
 = will_paginate(@problems)
