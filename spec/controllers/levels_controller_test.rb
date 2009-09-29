@@ -68,9 +68,9 @@ describe LevelsController do
       @level = Factory.create(:level)
     end
 
-    it "index action should redirect to login page" do
+    it "index action should render index template" do
       get :index
-      response.should redirect_to(login_path)
+      response.should render_template(:index)
     end
 
     it "show action should redirect to login page" do
