@@ -4,4 +4,13 @@ class Problem < ActiveRecord::Base
   belongs_to :level  
   has_many :statements
   has_many :analyses
+
+  def to_param
+    self.code
+  end
+
+  def blablabla(id_or_code)
+    find_by_id(id_or_code) || find_by_code(id_or_code)
+  end
+
 end

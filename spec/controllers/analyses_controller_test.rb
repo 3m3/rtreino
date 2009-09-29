@@ -11,12 +11,12 @@ describe AnalysesController do
     end
 
     def myget(action, things={})
-      things[:problem_id] = @problem.id
+      things[:problem_id] = @problem.code
       get action, things
     end 
 
     def mypost(action, things={})
-      things[:problem_id] = @problem.id
+      things[:problem_id] = @problem.code
       post action, things 
     end
 
@@ -60,14 +60,14 @@ describe AnalysesController do
     end
 
     it "update action should redirect when model is valid" do
-      put :update, :id => Analysis.first, :analysis => {}, :problem_id => @problem.id
+      put :update, :id => Analysis.first, :analysis => {}, :problem_id => @problem.code
       response.should redirect_to(edit_problem_url(@problem))
     end
 
     it "destroy action should destroy model and redirect to index action" do
       pending
       lambda {
-        delete :destroy, :id => Analysis.first, :problem_id => @problem.id
+        delete :destroy, :id => Analysis.first, :problem_id => @problem.code
       }.should change(Analysis, :count).by(-1)
       response.should redirect_to(analyses_url)
     end

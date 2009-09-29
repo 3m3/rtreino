@@ -2,7 +2,7 @@ class StatementsController < InheritedResources::Base
   before_filter :login_required
   actions :show, :new, :edit, :create, :update, :destroy
   respond_to :html, :js, :xml, :json
-  belongs_to :problem
+  belongs_to :problem, :finder => :find_by_code!
   
   def create
     create! { edit_problem_path(@problem) }

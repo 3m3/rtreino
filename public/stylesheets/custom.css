@@ -1,7 +1,10 @@
 div.statement, div.analysis, div.comment {
   border: 1px solid gray;
   padding-left: 15px; 
-  margin-left: 10px; }
+  padding-right: 15px;
+  margin-left: 10px; 
+  text-align: justify;
+  text-justify: distribute; }
 
 div.comment {
   margin-bottom: 5px; 
@@ -14,8 +17,34 @@ div.comment {
 h1 {
   font-size: 18px; }
 
-
 .problem_code, .problem_level_id { 
   min-width: 100px; }
 .problem_name {
   min-width: 300px; }
+
+#tabs {
+  margin: 0; }
+#tabs ul {
+    margin:  0;
+    padding: 0;
+    list-style: none; }
+#tabs li {
+    display: inline;
+    margin: 0px 0px 0px 0px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid gray; }
+
+#tabs a {
+  text-decoration: none; }
+
+.tabContent {
+  margin-top: 5px; }
+
+th {
+  min-width: 100px; }
+
+.eq_latex {
+  vertical-align: bottom; }
+
+.centered {
+  text-align: center; }

@@ -16,3 +16,4 @@ end
 Then /^I should see the following problems:$/ do |expected_problems_table|
   expected_problems_table.diff!(table_at('table').to_a)
 end
+

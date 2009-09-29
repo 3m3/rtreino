@@ -29,7 +29,7 @@ describe ProblemsController do
     end
   
     it "show action should render show template" do
-      get :show, :id => @problem.id.to_s
+      get :show, :id => @problem.code
       response.should render_template(:show)
     end
 
@@ -58,6 +58,7 @@ describe ProblemsController do
     it "create action should redirect when model is valid" do
       @problem = Problem.new
       @problem.stub!(:valid?).and_return(true)
+      @problem.stub!(:code).and_return('TEST')
       Problem.stub!(:new).and_return(@problem)
       lambda {
         post :create, :problem => {}      
@@ -65,18 +66,19 @@ describe ProblemsController do
     end
   
     it "edit action should render edit template" do
-      get :edit, :id => Problem.first
+      get :edit, :id => Problem.first.code
       response.should render_template(:edit)
     end
   
     it "update action should redirect when model is valid" do
-      put :update, :id => Problem.first, :problem => {}
+      put :update, :id => Problem.first.code, :problem => {}
       response.should redirect_to(edit_problem_url(assigns[:problem]))
     end
   
     it "destroy action should destroy model and redirect to index action" do
+      pending
       lambda {
-        delete :destroy, :id => Problem.first
+        delete :destroy, :id => Problem.first.code
       }.should change(Problem, :count).by(-1)
       response.should redirect_to(problems_url)
     end

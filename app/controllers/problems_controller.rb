@@ -25,4 +25,8 @@ class ProblemsController < InheritedResources::Base
     @problems_sources = @problems.group_by { |p| p.source }
   end
 
+  def resource
+    @problem ||= end_of_association_chain.find_by_code(params[:id])
+  end
+
 end
