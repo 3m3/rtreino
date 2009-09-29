@@ -1,0 +1,14 @@
+%div#statements
+  %ul#tabs
+    - @problem.statements.each do |statement|
+      %li= link_to_function statement.language.name, "showTab('div#statements', 'statement_#{statement.id}');"
+    %li{:style => 'border: 0px'}= link_to 'New statement', new_problem_statement_path(@problem)
+    
+  - @problem.statements.each do |statement|
+    %div.statement.tabContent{ :id => "statement_#{statement.id}", :style => "display: #{(statement == @problem.statements.first) ? "block" : "none" };"}
+      ~ statement.body_html
+      %p.actions
+        = link_to 'Edit', edit_problem_statement_path(@problem, statement)
+        |
+        = link_to 'Remove', [@problem, statement], :confirm => 'Are you sure?', :method => :delete
+

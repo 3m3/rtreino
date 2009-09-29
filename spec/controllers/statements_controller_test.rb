@@ -4,12 +4,12 @@ describe StatementsController do
   integrate_views
 
   def myget(action, things={})
-    things[:problem_id] = @problem.id
+    things[:problem_id] = @problem.code
     get action, things
   end 
 
   def mypost(action, things={})
-    things[:problem_id] = @problem.id
+    things[:problem_id] = @problem.code
     post action, things 
   end
  
@@ -61,14 +61,14 @@ describe StatementsController do
     end
 
     it "update action should redirect to login page" do
-      put :update, :id => @statement, :statement => {}, :problem_id => @problem.id
+      put :update, :id => @statement, :statement => {}, :problem_id => @problem.code
       response.should redirect_to(login_path)
     end
 
     it "destroy action should redirect to login page" do
       pending
       lambda {
-        delete :destroy, :id => @statement, :problem_id => @problem.id
+        delete :destroy, :id => @statement, :problem_id => @problem.code
       }.should change(Statement, :count).by(0)
       response.should redirect_to(login_path)
     end
@@ -121,14 +121,14 @@ describe StatementsController do
     end
 
     it "update action should redirect when model is valid" do
-      put :update, :id => @statement, :statement => {}, :problem_id => @problem.id
+      put :update, :id => @statement, :statement => {}, :problem_id => @problem.code
       response.should redirect_to(edit_problem_url(@problem))
     end
 
     it "destroy action should destroy model and redirect to index action" do
       pending
       lambda {
-        delete :destroy, :id => @statement, :problem_id => @problem.id
+        delete :destroy, :id => @statement, :problem_id => @problem.code
       }.should change(Statement, :count).by(-1)
       response.should redirect_to(statements_url)
     end

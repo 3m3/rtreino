@@ -4,7 +4,7 @@ class AnalysesController < InheritedResources::Base
   
   actions :show, :new, :edit, :create, :update
   respond_to :html, :js, :xml, :json
-  belongs_to :problem
+  belongs_to :problem, :finder => :find_by_code!
 
   def create
     params[:analysis][:user_id] = current_user.id
@@ -34,5 +34,7 @@ class AnalysesController < InheritedResources::Base
       false
     end
   end
+
+  
 
 end

@@ -1,13 +1,19 @@
-%h1.heading
-  = "Analysis %s" % @analysis.id
-  
-- content_tag_for(:dl, @analysis) do
-  %dt.label= 'Body'
-  %dd.body= h @analysis.try(:body)
-  %dt.label= 'User'
-  %dd.user_id= h @analysis.try(:user_id)
-  %dt.label= 'Problem'
-  %dd.problem_id= h @analysis.try(:problem_id)
-  
+%div.centered
+  %h1.heading= "Analysis of problem %s" % @analysis.problem.id
+  %p
+    %em= "by %s" % @analysis.user.username
+
+~ @analysis.body_html
+%p.actions
+  - if current_user == @analysis.user || current_user.admin?
+    = link_to 'Edit', edit_problem_analysis_path(@problem, @analysis)
+    |
+  = link_to 'New comment', new_analysis_comment_path(@analysis)
+  |
+  = link_to_function 'View comments', "$(comments).toogle()"
+%h3 Comments
+%div#comments
+  = render :partial => @analysis.comments
+
 %p.actions
   = link_to 'Back to the problem', edit_problem_path(@problem)

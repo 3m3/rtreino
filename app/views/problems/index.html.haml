@@ -5,9 +5,9 @@
   = link_to 'New Problem', new_problem_path
 
 
-- @problems_sources.keys.sort.each do |k|
+- @problems_sources.keys.sort.each do |key|
   %h3 
-    %em= k
+    %em= key
   %table{ :style => 'margin-left: 10px;' }
     %thead.header
       %tr
@@ -17,7 +17,7 @@
         - if logged?
           %th.actions= 'Actions'
       %tbody.items.problems
-        - @problems_sources[k].each do |problem|
+        - @problems_sources[key].each do |problem|
           = render 'item', :problem => problem
 
 = will_paginate(@problems)

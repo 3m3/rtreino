@@ -12,20 +12,20 @@ module NavigationHelpers
       new_problem_path    
     when /the edit problem page/
       edit_problem_path
-    when /the edit page of some problem that has only one analysis with one comment/
+    when /the show page of some problem that has only one analysis with one comment/
       @comment = Factory.create(:comment_from_analysis)
       @analysis = @comment.commentable
       @problem = @analysis.problem
-      edit_problem_path(@problem)
-    when /the edit page of some problem that has only one analysis that I commented/
+      problem_path(@problem)
+    when /the show page of some problem that has only one analysis that I commented/
       @comment = Factory.create(:comment_from_analysis, :user => @user)
       @analysis = @comment.commentable
       @problem = @analysis.problem
-      edit_problem_path(@problem)
-    when /the edit page of some problem that has only one analysis/
+      problem_path(@problem)
+    when /the show page of some problem that has only one analysis/
       @analysis = Factory.create(:analysis)
       @problem = @analysis.problem
-      edit_problem_path(@problem)
+      problem_path(@problem)
     when /the edit page of some problem/
       @problem = Factory.create(:problem)
       edit_problem_path(@problem)
@@ -54,6 +54,9 @@ module NavigationHelpers
       @analysis = Factory.create(:analysis, :user => @user)
       @problem = @analysis.problem
       edit_problem_analysis_path(@problem, @analysis)
+    when /the show page of problem with code TEST/
+      @problem = Factory.create(:problem, :code => "TEST")
+      problem_path(@problem)
     when /the languages page/
       languages_path
     when /the new language page/
