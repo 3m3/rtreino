@@ -5,11 +5,28 @@ class StatementsController < InheritedResources::Base
   belongs_to :problem, :finder => :find_by_code!
   
   def create
-    create! { edit_problem_path(@problem) }
+    create! do |success, failure|
+      success.html do 
+        if params[:commit] == "Create and continue"
+          redirect_to edit_problem_statement_path(@problem, @statement)
+        else
+          redirect_to problem_path(@problem)
+        end
+      end
+      failure.html { render :new }
+    end
   end
 
   def update
-    update! { edit_problem_path(@problem) }
+    update! do |success, failure|
+      success.html do
+        if params[:commit] == "Update and continue"
+          redirect_to edit_problem_statement_path(@problem, @statement)
+        else
+          redirect_to problem_path(@problem)
+        end
+      end
+    end
   end
 
   def destroy

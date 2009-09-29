@@ -12,6 +12,10 @@ module NavigationHelpers
       new_problem_path    
     when /the edit problem page/
       edit_problem_path
+    when /the problem page/
+      problem_path
+    when /the edit problem statement page/
+      edit_problem_statement_path
     when /the show page of some problem that has only one analysis with one comment/
       @comment = Factory.create(:comment_from_analysis)
       @analysis = @comment.commentable
