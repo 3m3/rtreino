@@ -106,13 +106,24 @@ describe StatementsController do
       }.should change(Statement, :count).by(0)
     end
 
-    it "create action should redirect when model is valid" do
+    it "create action should redirect problem page when model is valid and I pressed create button" do
       @statement = Statement.new
       @statement.stub!(:valid?).and_return(true)
       Statement.stub!(:new).and_return(@statement)
       lambda {
-        mypost :create, :statement => {}      
+        mypost :create, :statement => {}, :commit => "Create"
       }.should change(Statement, :count).by(1)
+      response.should redirect_to(problem_path(@statement.problem))
+    end
+
+    it "create action should redirect edit problem statement page when model is valid and I pressed create and continue button" do
+      @statement = Statement.new
+      @statement.stub!(:valid?).and_return(true)
+      Statement.stub!(:new).and_return(@statement)
+      lambda {
+        mypost :create, :statement => {}, :commit => "Create and continue" 
+      }.should change(Statement, :count).by(1)
+      response.should redirect_to(edit_problem_statement_path(@statement.problem, @statement))
     end
 
     it "edit action should render edit template" do
@@ -120,9 +131,14 @@ describe StatementsController do
       response.should render_template(:edit)
     end
 
-    it "update action should redirect when model is valid" do
-      put :update, :id => @statement, :statement => {}, :problem_id => @problem.code
-      response.should redirect_to(edit_problem_url(@problem))
+    it "update action should redirect problem page when model is valid and I press update button" do
+      put :update, :id => @statement, :statement => {}, :commit => 'Update', :problem_id => @problem.code
+      response.should redirect_to(problem_url(@problem))
+    end
+
+    it "update action should redirect problem page when model is valid and I press update and continue button" do
+      put :update, :id => @statement, :statement => {}, :commit => 'Update and continue', :problem_id => @problem.code
+      response.should redirect_to(edit_problem_statement_url(@problem, @statement))
     end
 
     it "destroy action should destroy model and redirect to index action" do
