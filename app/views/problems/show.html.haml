@@ -22,6 +22,6 @@
       %td{:align => :center}= "%s ago" % time_ago_in_words(analysis.created_at)
       %td{:align => :center}= "%s ago" % time_ago_in_words(analysis.updated_at)
       %td{:align => :center}
-        = link_to "Edit", edit_problem_analysis_path(@problem, analysis)
-        |
         = link_to "Show", problem_analysis_path(@problem, analysis)
+        |
+        = link_to "Edit", edit_problem_analysis_path(@problem, analysis)
