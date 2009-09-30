@@ -9,6 +9,7 @@ Feature: Manage problems
     When I fill in "CODE" with "TEST"
     And I fill in "Name" with "name 1"
     And I fill in "Source" with "source 1"
+    And I choose "Math"
     And I press "Create"
     Then I should be on the edit problem page
     And the fields in following should contain:
@@ -31,6 +32,7 @@ Feature: Manage problems
     When I fill in "CODE" with "TEST"
     And I fill in "Name" with "name 1"
     And I fill in "Source" with "source 1"
+    And I choose "Programming"
     And I press "Create"
     Then I should be on the edit problem page
     When I select "hard" from "Level"

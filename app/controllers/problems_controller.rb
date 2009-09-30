@@ -3,6 +3,7 @@ class ProblemsController < InheritedResources::Base
 
   actions :index, :show, :new, :edit, :create, :update, :destroy
   respond_to :html, :js, :xml, :json
+  has_scope :type
 
   def create
     create! do |success, failure|

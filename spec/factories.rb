@@ -2,6 +2,7 @@ Factory.define :problem do |f|
   f.sequence(:code) { |n| "code#{n}" }
   f.name "Name"
   f.source "Source"
+  f.problem_type 'Math'
   f.association :level
 end
 

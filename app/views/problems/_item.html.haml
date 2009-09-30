@@ -1,7 +1,8 @@
 - content_tag_for(:tr, problem, :class => cycle(:odd, :even)) do
   %td.code= h problem.try(:code)
   %td.name= h problem.try(:name)
-  %td.level_id= h level_name_of(problem)
+  %td.level_id{:align => :center}= h level_name_of(problem)
+  %td.type{:align => :center}= h problem.try(:problem_type)
   - if logged?
     %td.actions
       = link_to 'Show', problem_path(problem)
