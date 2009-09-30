@@ -1,4 +1,4 @@
-class AddTypeProblem < ActiveRecord::Migration
+class AddProblemTypeProblem < ActiveRecord::Migration
   def self.up
     add_column :problems, :problem_type, :string
   end
