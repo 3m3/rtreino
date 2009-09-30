@@ -5,9 +5,8 @@
   = render 'form', :form => form
   - form.buttons do
     = form.commit_button 'Update'
-    
-%p.actions
-  = link_to 'Cancel', problems_path
+    = link_to 'Cancel', problems_path
+    = link_to 'New problem', new_problem_path
 
 
 %h2 Statements
