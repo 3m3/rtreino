@@ -38,7 +38,8 @@ class CommentsController < InheritedResources::Base
 
   def path_for comment 
     if comment.commentable_type == 'Analysis'
-      edit_problem_path(Analysis.find(comment.commentable_id).problem)
+      analysis = Analysis.find(comment.commentable_id)
+      problem_analysis_path(analysis.problem, analysis)
     elsif comment.commentable_type == 'Comment'
       path_for Comment.find(comment.commentable_id)
     end

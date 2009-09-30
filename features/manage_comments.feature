@@ -11,7 +11,7 @@ Feature: Manage comments
     Then I should be on the new comment of analysis page
     When I fill in "Body" with "body 1"
     And I press "Create"
-    Then I should be on the edit problem page
+    Then I should be on the problem analysis page
 
   Scenario: Edit some comment from analysis
     Given I login
@@ -20,7 +20,7 @@ Feature: Manage comments
     And I follow "Edit" within "#comments"
     And I fill in "Body" with "body 2"
     And I press "Update"
-    Then I should be on the edit problem page
+    Then I should be on the problem analysis page
 
   Scenario: Edit some analysis from other user and I like admin
     Given I login as admin
@@ -29,7 +29,7 @@ Feature: Manage comments
     And I follow "Edit" within "#comments"
     And I fill in "Body" with "body 2"
     And I press "Update"
-    Then I should be on the edit problem page
+    Then I should be on the problem analysis page
 
   Scenario: Register new reply
     Given I login
@@ -39,4 +39,4 @@ Feature: Manage comments
     Then I should be on the new comment of comment page
     When I fill in "Body" with "body 1"
     And I press "Create"
-    Then I should be on the edit problem page
+    Then I should be on the problem analysis page
