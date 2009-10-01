@@ -22,4 +22,11 @@ describe Category do
     category.should_not be_valid
   end
 
+  it "should not be cyclic" do
+    parent = Factory.create(:category, :category => nil)
+    child  = Factory.create(:category, :category => parent)
+    parent.category = child
+    parent.should_not be_valid
+  end
+
 end
