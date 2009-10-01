@@ -39,6 +39,9 @@ module NavigationHelpers
       edit_problem_path(@problem)
     when /the homepage/
       '/'
+    when /the new online judge page/
+      new_online_judge_path
+
     when /the new comment page/
       new_comment_path
     when /the new comment of analysis page/

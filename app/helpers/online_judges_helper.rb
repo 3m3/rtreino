@@ -1,0 +1,3 @@
+module OnlineJudgesHelper
+  
+end

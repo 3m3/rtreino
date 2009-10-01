@@ -1,0 +1,9 @@
+- content_tag_for(:tr, online_judge, :class => cycle(:odd, :even)) do
+  %td.name= h online_judge.try(:name)
+  %td.webpage= h online_judge.try(:webpage)
+  %td.actions
+    = link_to 'Show', online_judge_path(online_judge)
+    |
+    = link_to 'Edit', edit_online_judge_path(online_judge)
+    |
+    = link_to 'Destroy', online_judge, :confirm => 'Are you sure?', :method => :delete

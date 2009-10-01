@@ -1,0 +1,13 @@
+%h1.heading
+  = "Online judge %s" % @online_judge.id
+  
+- content_tag_for(:dl, @online_judge) do
+  %dt.label= 'Name'
+  %dd.name= h @online_judge.try(:name)
+  %dt.label= 'Webpage'
+  %dd.webpage= h @online_judge.try(:webpage)
+  
+%p.actions
+  = link_to 'Edit', edit_online_judge_path(@online_judge)
+  |
+  = link_to 'Index', online_judges_path

@@ -1,0 +1,8 @@
+%h1.heading
+  = "Editing online_judge %s" % @online_judge.id
+  
+- semantic_form_for(@online_judge) do |form|
+  = render 'form', :form => form
+  - form.buttons do
+    = form.commit_button 'Update'
+    = link_to 'Cancel', online_judges_path

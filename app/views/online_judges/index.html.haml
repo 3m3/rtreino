@@ -1,0 +1,17 @@
+%h1.heading
+  = "Online judges"
+  
+%p.actions
+  = link_to 'New Online judge', new_online_judge_path
+  
+%table
+  %thead.header
+    %tr
+      %th.name= 'Name'
+      %th.webpage= 'Webpage'
+      %th.actions= 'Actions'
+  %tbody.items.online_judges
+    - @online_judges.each do |online_judge|
+      = render 'item', :online_judge => online_judge
+      
+= will_paginate(@online_judges)
