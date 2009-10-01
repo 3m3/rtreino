@@ -18,7 +18,6 @@ Feature: Manage problems
       |Source|source 1|
 
   Scenario: Register new problem with category and level
-    Pending
     Given the following categories:
       |name  |
       |Graph |
@@ -27,6 +26,10 @@ Feature: Manage problems
       |name|
       |easy|
       |hard|
+    Given the following online judges:
+      |name|
+      |UVA|
+      |PKU|
     Given I login
     And I am on the new problem page
     When I fill in "CODE" with "TEST"
@@ -34,6 +37,9 @@ Feature: Manage problems
     And I fill in "Source" with "source 1"
     And I check "Graph"
     And I choose "Programming"
+    And I select "UVA" from "Online Judge"
+    And I fill in "Online judge code" with "101"
+    And I fill in "Online judge link" with "http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=3&page=show_problem&problem=36"
     And I press "Create"
     Then I should be on the edit problem page
     When I select "hard" from "Level"

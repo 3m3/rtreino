@@ -14,7 +14,7 @@ Feature: Manage online judges
 
   Scenario: Delete online_judge
     Given I login
-    And the following online_judges:
+    And the following online judges:
       |name|webpage|
       |name 1|webpage 1|
       |name 2|webpage 2|

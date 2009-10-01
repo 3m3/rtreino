@@ -4,4 +4,7 @@
   = form.input :source
   = form.input :level_id, :label_method => :name
   = form.input :problem_type, :as => :radio, :collection => ['Math', 'Programming']
+  = form.input :online_judge_id, :label_method => :name
+  = form.input :online_judge_code
+  = form.input :online_judge_link
   = form.input :categories, :as => :check_boxes, :label_method => :long_name

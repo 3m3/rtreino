@@ -18,3 +18,9 @@ Then /^the fields in following should contain:$/ do |fields|
     When %{the "#{name}" field should contain "#{value}"}
   end
 end
+
+When /^I fill first field "([^\"]*)" with "([^\"]*)"$/ do |field, value|
+  
+end
+
+

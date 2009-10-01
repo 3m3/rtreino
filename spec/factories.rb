@@ -4,6 +4,7 @@ Factory.define :problem do |f|
   f.source "Source"
   f.problem_type 'Math'
   f.association :level
+  f.sequence(:online_judge_link) { |n| "http://test.com/#{n}" }
 end
 
 Factory.define :level do |f|

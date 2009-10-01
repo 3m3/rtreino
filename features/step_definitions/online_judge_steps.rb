@@ -1,4 +1,4 @@
-Given /^the following online_judges:$/ do |online_judges|
+Given /^the following online judges:$/ do |online_judges|
   OnlineJudge.destroy_all
   OnlineJudge.create!(online_judges.hashes)
 end
