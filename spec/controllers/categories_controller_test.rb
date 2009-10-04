@@ -4,21 +4,27 @@ describe CategoriesController do
 
   integrate_views
 
+  before(:each) do
+    @category = Factory.create(:category)
+  end
+
+  it "index action should render index template" do
+    get :index
+    response.should render_template(:index)
+  end
+
+  it "show action should render show template" do
+    get :show, :id => @category
+    response.should render_template(:show)
+  end
+
+
+
   describe "Logged" do
 
     before(:each) do
       execute_login
       @category = Factory.create(:category)
-    end
-
-    it "index action should render index template" do
-      get :index
-      response.should render_template(:index)
-    end
-
-    it "show action should render show template" do
-      get :show, :id => @category
-      response.should render_template(:show)
     end
 
     it "new action should render new template" do
@@ -69,16 +75,6 @@ describe CategoriesController do
 
     before(:each) do
       @category = Factory.create(:category)
-    end
-
-    it "index action" do
-      get :index
-      response.should redirect_to(login_url)
-    end
-
-    it "show action" do
-      get :show, :id => @category
-      response.should redirect_to(login_url)
     end
 
     it "new action" do
