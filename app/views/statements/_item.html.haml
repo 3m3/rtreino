@@ -1,5 +1,6 @@
 - content_tag_for(:tr, statement, :class => cycle(:odd, :even)) do
   %td.language_id= h statement.try(:language_id)
+  %td.title= h statement.try(:title)
   %td.body= h statement.try(:body)
   %td.actions
     = link_to 'Show', statement_path(statement)

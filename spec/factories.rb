@@ -64,6 +64,7 @@ end
 Factory.define :statement do |f|
   f.association :language
   f.association :problem
+  f.title "title"
   f.body "text"
 end
 
