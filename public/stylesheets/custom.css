@@ -11,8 +11,14 @@ div.comment {
   margin-right: 5px; }
 
 #user_nav {
+  padding: 10px;
   float: right; 
   font-size: 12px; }
+
+#user_nav a {
+  color: white; }
+#user_nav a:hover {
+  color: black; }
 
 h1 {
   font-size: 18px; }

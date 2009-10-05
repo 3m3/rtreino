@@ -9,48 +9,53 @@
     = stylesheet_link_tag 'custom'
     = stylesheet_link_tag 'formtastic'
     = stylesheet_link_tag 'formtastic_changes'
+    = stylesheet_link_tag 'joel'
     = javascript_include_tag :all
     = yield(:head)
   
   %body
     #container
-      %div#user_nav
-        - if current_user
-          %b
-            = current_user.username
-          |
-          = link_to "Edit profile", edit_user_path(:current)
-          |
-          = link_to "Logout", logout_path
-        - else
-          = link_to "Register", new_user_path
-          |
-          = link_to "Login", login_path
-
-      %br
-
-      %div#menu
-        %b Krasnaia Pravda!
+      %div#header
+        %div#user_nav
+          - if current_user
+            %b
+              = current_user.username
+            |
+            = link_to "Edit profile", edit_user_path(:current)
+            |
+            = link_to "Logout", logout_path
+          - else
+            = link_to "Register", new_user_path
+            |
+            = link_to "Login", login_path
         %br
-        = link_to "Problems", problems_path
-        |
-        = link_to "Languages", languages_path
-        |
-        = link_to "Levels", levels_path
-        |
-        = link_to "Categories", categories_path
-        |
-        = link_to "Online Judges", online_judges_path
-        |
-        = link_to "Users", users_path
-        %hr
 
+        %h1
+          %strong#title-name Krasnaia Pravda
 
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
-      
-      - if show_title?
-        %h1=h yield(:title)
-      
-      = yield
+
+      %div#main
+        %div#menu-nav
+          %ul
+            %li{ :class => @problems.nil? ? "menu-tab" : "selected" }
+              = link_to "Problems", problems_path
+            %li{ :class => @languages.nil? ? "menu-tab" : "selected" }
+              = link_to "Languages", languages_path
+            %li{ :class => @levels.nil? ? "menu-tab" : "selected" }
+              = link_to "Levels", levels_path
+            %li{ :class => @categories.nil? ? "menu-tab" : "selected" }
+              = link_to "Categories", categories_path
+            %li{ :class => @online_judges.nil? ? "menu-tab" : "selected" }
+              = link_to "Online Judges", online_judges_path
+            %li{ :class => @users.nil? ? "menu-tab" : "selected" }
+              = link_to "Users", users_path
+
+
+
+        - if show_title?
+          %h1=h yield(:title)
+
+        = yield
   = "<script type=\"text/javascript\" src=\"http://tex.yourequations.com/\"></script>"

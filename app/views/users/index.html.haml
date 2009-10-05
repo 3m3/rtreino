@@ -1,17 +1,19 @@
-%h1.heading
-  = "Users"
-  
-%p.actions
-  = link_to 'New User', new_user_path
-  
-%table
-  %thead.header
-    %tr
-      %th.username= 'Username'
-      - if logged? && current_user.admin?
-        %th.actions= 'Actions'
-  %tbody.items.users
-    - @users.each do |user|
-      = render 'item', :user => user
-      
-= will_paginate(@users)
+%div#action-nav
+  %ul
+    %li
+      = link_to 'New User', new_user_path
+
+
+
+%div#main-content
+  %table
+    %thead.header
+      %tr
+        %th.username= 'Username'
+        - if logged? && current_user.admin?
+          %th.actions= 'Actions'
+    %tbody.items.users
+      - @users.each do |user|
+        = render 'item', :user => user
+
+  = will_paginate(@users)

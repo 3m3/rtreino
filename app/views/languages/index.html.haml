@@ -1,17 +1,17 @@
-%h1.heading
-  = "Languages"
+%div#action-nav
+  %ul
+    %li
+      = link_to 'New Language', new_language_path
 
-  %p.actions
-    = link_to 'New Language', new_language_path
+%div#main-content
+  %table
+    %thead.header
+      %tr
+        %th.name= 'Abbreviation'
+        %th.name= 'Name'
+        %th.actions= 'Actions'
+    %tbody.items.languages
+      - @languages.each do |language|
+        = render 'item', :language => language
 
-%table
-  %thead.header
-    %tr
-      %th.name= 'Abbreviation'
-      %th.name= 'Name'
-      %th.actions= 'Actions'
-  %tbody.items.languages
-    - @languages.each do |language|
-      = render 'item', :language => language
-
-= will_paginate(@languages)
+  = will_paginate(@languages)

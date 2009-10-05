@@ -1,30 +1,30 @@
-%h1.heading
-  = "Problems"
-  
-%p.actions
-  = link_to 'New Problem', new_problem_path
-  |
-  = link_to 'View all problems', problems_path
-  |
-  = link_to 'View only Math problems', "%s/?type=Math" % problems_path
-  |
-  = link_to 'View only Programming problems', "%s/?type=Programming" % problems_path
+%div#action-nav
+  %ul
+    %li
+      = link_to 'New Problem', new_problem_path
+    %li
+      = link_to 'View all problems', problems_path
+    %li
+      = link_to 'View only Math problems', "%s/?type=Math" % problems_path
+    %li
+      = link_to 'View only Programming problems', "%s/?type=Programming" % problems_path
 
 
-- @problems_sources.keys.sort.each do |key|
-  %h3 
-    %em= key
-  %table{ :style => 'margin-left: 10px;' }
-    %thead.header
-      %tr
-        %th.problem_code= 'Code'
-        %th.problem_name= 'Name'
-        %th.problem_level_id= 'Level'
-        %th.problem_type= 'Type'
-        - if logged?
-          %th.actions= 'Actions'
-      %tbody.items.problems
-        - @problems_sources[key].each do |problem|
-          = render 'item', :problem => problem
+%div#main-content
+  - @problems_sources.keys.sort.each do |key|
+    %h3 
+      %em= key
+    %table{ :style => 'margin-left: 10px;' }
+      %thead.header
+        %tr
+          %th.problem_code= 'Code'
+          %th.problem_name= 'Name'
+          %th.problem_level_id= 'Level'
+          %th.problem_type= 'Type'
+          - if logged?
+            %th.actions= 'Actions'
+        %tbody.items.problems
+          - @problems_sources[key].each do |problem|
+            = render 'item', :problem => problem
 
-= will_paginate(@problems)
+  = will_paginate(@problems)
