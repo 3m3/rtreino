@@ -22,9 +22,4 @@ describe Problem do
     Factory.build(:problem, :problem_type => nil).should_not be_valid
   end
 
-  it "should not be valid if haven't another problem with the same online judge link" do
-    Factory.create(:problem, :online_judge_link => 'http://test.com/a')
-    Factory.build(:problem, :online_judge_link => 'http://test.com/a').should_not be_valid
-  end
-
 end
