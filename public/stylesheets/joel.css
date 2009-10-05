@@ -141,10 +141,11 @@ strong#title-name { font-size: 40px; color: #006699;}
 #main-content {
   padding: 20px 10px 20px 10px;
   background: #fff;
-  -webkit-border-top-left-radius: 8px;
-  -webkit-border-top-right-radius: 8px;
-  -moz-border-radius-topleft: 8px;
-  -moz-border-radius-topright:8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -moz-border-radius-bottomright:8px;
+  border: 1px solid #ccc;
 }
 
 #main h1 {
@@ -214,6 +215,7 @@ h2#ptitle {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
+  margin: 10px 0 0 0;
 }
 
 .message {
