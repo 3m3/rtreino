@@ -5,18 +5,27 @@ require 'timeout'
 
 class PKU
   
-  def self.submissions_for(user)
-    Timeout::timeout(3) do
-      table = Hpricot(open("http://acm.pku.edu.cn/JudgeOnline/status?user_id=#{user}")).at("//table[@class='a']")
-      header = get_header(table.at("tr[@class='in']"))
-      table.search("tr[@align='center']").collect do |row|
-        get_submission(row,header)
+  def self.submissions_for(user, newer_than = -1)
+    url_status = "http://acm.pku.edu.cn/JudgeOnline/status?user_id=#{user}"
+    all_submissions = Array.new
+    last_run_id = nil
+    while true do
+      Timeout::timeout(3) do
+        table = Hpricot(open(url_status + (last_run_id.nil? ? "" : "&top=#{last_run_id}"))).at("//table[@class='a']")
+        header = get_header(table.at("tr[@class='in']"))
+        table.search("tr[@align='center']").collect do |row|
+          submission = get_submission(row,header)
+          all_submissions << submission if submission["Run ID"].to_i > newer_than.to_i
+        end
       end
+      break if all_submissions.empty? or last_run_id == all_submissions.last["Run ID"]
+      last_run_id = all_submissions.last["Run ID"]
     end
+    all_submissions
   end
-  
+
   private
-    
+
   def self.get_submission(row, header)
     s = Hash.new
     row.search("td").each_with_index do |t,i|        
@@ -26,11 +35,12 @@ class PKU
     end 
     s
   end
-  
+
   def self.get_header(row)
     row.search("td").collect do |t|
       t.html
     end
   end
-  
+
 end
+

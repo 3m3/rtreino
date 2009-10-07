@@ -22,3 +22,8 @@ Feature: Query to PKU
     Given user = "rtreino"
     When I ask for the submissions
     Then I should get the first submission from the second page
+
+  Scenario: Get newer submissions than a specific submission from a specific user 
+    Given user = "rtreino" and submission with run_id = "5747447"
+    When I ask for the newer submissions
+    Then I should get some submissions with run_ids bigger 

@@ -51,3 +51,17 @@ Then /^I should get the first submission from the second page$/ do
   "Code Length" => "30B",
   "Submit Time" => "2009-05-12 06:49:32"}
 end
+
+Given /^user = "([^\"]*)" and submission with run_id = "([^\"]*)"$/ do |user, run_id|
+  @user = user
+  @run_id = run_id
+end
+
+When /^I ask for the newer submissions$/ do
+  @submissions = PKU.submissions_for(@user, @run_id)
+end
+
+Then /^I should get some submissions with run_ids bigger$/ do
+  @submissions.last["Run ID"].to_i.should > @run_id.to_i
+end
+
