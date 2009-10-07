@@ -8,7 +8,10 @@ class Problem < ActiveRecord::Base
   has_one :online_judge
   named_scope :type, proc { |type| { :conditions => { :problem_type => type } } }
 
+  log_model_actions
+
   def to_param
     self.code
   end
+
 end

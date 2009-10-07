@@ -32,6 +32,8 @@
       %div#menu
         %b Krasnaia Pravda!
         %br
+        = link_to "Home", url_for(:controller => 'dashboard', :action => 'index')
+        |
         = link_to "Problems", problems_path
         |
         = link_to "Languages", languages_path

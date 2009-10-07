@@ -1,8 +1,8 @@
 def register_user(as_admin=false)
   if as_admin
-    @user ||= Factory.create(:user, :confirmation_ok => true, :admin => true)
+    @user ||= Factory.create(:user, :username => 'User', :confirmation_ok => true, :admin => true)
   else
-    @user ||= Factory.create(:user, :confirmation_ok => true)
+    @user ||= Factory.create(:user, :username => 'User', :confirmation_ok => true)
   end
 end
 

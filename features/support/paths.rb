@@ -8,8 +8,10 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
+    when /the dashboard page/
+      url_for :controller => 'dashboard', :action => 'index'
     when /the new problem page/
-      new_problem_path    
+      new_problem_path
     when /the edit problem page/
       edit_problem_path
     when /the problem page/
@@ -39,6 +41,9 @@ module NavigationHelpers
       edit_problem_path(@problem)
     when /the homepage/
       '/'
+    when /the new dashboard page/
+      new_dashboard_path
+
     when /the new online judge page/
       new_online_judge_path
 

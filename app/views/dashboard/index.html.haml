@@ -1,0 +1,10 @@
+%h1 What are the users doing?
+%ul
+  - @logs.each do |log|
+    %li
+      = log.created_at
+      \-
+      = msg log
+
+= will_paginate(@logs)
+

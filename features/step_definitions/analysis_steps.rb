@@ -2,6 +2,19 @@ Given /^the following analyses:$/ do |analyses|
   Analysis.create!(analyses.hashes)
 end
 
+Given /^I created a analysis to problem TEST$/ do
+  problem  = Factory.create(:problem, :code => 'TEST')
+  analysis = Factory.create(:analysis, :problem => problem, :user => @user)
+end
+
+Given /^I updated a analysis to problem TEST$/ do
+  problem = Problem.find_by_code('TEST')
+  analysis = problem.analyses.find_by_user_id(@user.id)
+  analysis.body = "changed"
+  analysis.save
+end
+
+
 When /^I delete the (\d+)(?:st|nd|rd|th) analysis$/ do |pos|
   visit analyses_url
   within("table > tr:nth-child(#{pos.to_i+1})") do

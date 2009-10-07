@@ -5,6 +5,7 @@ class Analysis < ActiveRecord::Base
   belongs_to :problem
   belongs_to :user
   has_many :comments, :as => :commentable
+  log_model_actions
 
   def body_html
     Txt2Tags.generate self.body, :html
