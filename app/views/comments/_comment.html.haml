@@ -6,7 +6,7 @@
     %br
     %b Body:
     %br
-    ~ comment.body_html
+    ~ comment.body_to_html
 
   %p.actions
     - if current_user == comment.user || current_user.admin?

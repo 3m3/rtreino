@@ -1,13 +1,8 @@
-require File.dirname(__FILE__) + '/../../lib/txt2tags'
-
 class Analysis < ActiveRecord::Base
   validates_presence_of :body, :problem, :user
   belongs_to :problem
   belongs_to :user
   has_many :comments, :as => :commentable
   log_model_actions
-
-  def body_html
-    Txt2Tags.generate self.body, :html
-  end
+  convert_txt_to_tags :body
 end
