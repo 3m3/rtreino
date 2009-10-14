@@ -6,4 +6,8 @@
   - form.buttons do
     = form.commit_button 'Create'
     = form.commit_button 'Create and continue'
+    = link_to_function "Preview", "preview('statement_body')"
+    |
     = link_to 'Back to problem', problem_path(@problem)
+
+%div#preview

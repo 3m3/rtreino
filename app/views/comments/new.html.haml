@@ -5,4 +5,8 @@
   = render 'form', :form => form
   - form.buttons do
     = form.commit_button 'Create'
+    = link_to_function 'Preview', "preview('comment_body')"
+    |
     = link_to_function 'Cancel', "window.back()" 
+
+%div#preview

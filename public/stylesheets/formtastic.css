@@ -89,7 +89,7 @@ form.formtastic fieldset ol li.numeric input { width:74%; }
 
 /* TEXTAREA OVERRIDES
 --------------------------------------------------------------------------------------------------*/
-form.formtastic fieldset ol li.text textarea { width:74%; }
+form.formtastic fieldset ol li.text textarea { min-width:74%; max-width: 100%;  }
 
 
 /* HIDDEN OVERRIDES

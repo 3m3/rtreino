@@ -11,4 +11,8 @@ You can use a markup. Read about in
   - form.buttons do
     = form.commit_button 'Update'
     = form.commit_button 'Update and continue'
+    = link_to_function 'Preview', "preview('analysis_body')"
+    |
     = link_to 'Back to problem', problem_path(@problem)
+
+%div#preview

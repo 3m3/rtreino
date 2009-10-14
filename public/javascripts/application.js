@@ -21,3 +21,9 @@ Event.observe(window, 'load', function() {
   if (e) e.focus();
 });
 
+
+function preview(textarea) {
+  $('preview').update('<h2>Preview</h2><hr/>' + $(textarea).value);
+  AMtranslated = false; 
+  generic();
+}
