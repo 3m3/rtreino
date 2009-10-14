@@ -3,9 +3,9 @@
   %td.name= h problem.try(:name)
   %td.level_id{:align => :center}= h level_name_of(problem)
   %td.type{:align => :center}= h problem.try(:problem_type)
-  - if logged?
-    %td.actions
-      = link_to 'Show', problem_path(problem)
+  %td.actions
+    = link_to 'Show', problem_path(problem)
+    - if logged?
       |
       = link_to 'Edit', edit_problem_path(problem)
       |

@@ -43,6 +43,9 @@ h1 {
 th {
   min-width: 100px; }
 
+td.actions {
+  text-align: center; }
+
 .eq_latex {
   vertical-align: bottom; }
 

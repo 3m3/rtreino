@@ -1,5 +1,4 @@
-%h1.heading
-  = "Problems"
+%h1.heading= "Problems"
   
 %p.actions
   = link_to 'New Problem', new_problem_path
@@ -21,8 +20,7 @@
         %th.problem_name= 'Name'
         %th.problem_level_id= 'Level'
         %th.problem_type= 'Type'
-        - if logged?
-          %th.actions= 'Actions'
+        %th.actions= 'Actions'
       %tbody.items.problems
         - @problems_sources[key].each do |problem|
           = render 'item', :problem => problem
