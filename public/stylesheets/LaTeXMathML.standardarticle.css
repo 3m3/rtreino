@@ -148,8 +148,7 @@ div.itemize {
 /* vertical spacing */
 
 p.LaTeXMathML {
-  font-size: 0em;
-  margin-top: 10px;
+  font-size: 0.25em;
 }
 
 p.smallskip {  
