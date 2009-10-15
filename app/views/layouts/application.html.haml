@@ -10,8 +10,7 @@
     = stylesheet_link_tag 'formtastic'
     = stylesheet_link_tag 'formtastic_changes'
     = javascript_include_tag :all
-    = javascript_include_tag "LaTeXMathML"
-    = javascript_include_tag "window"
+    = javascript_include_tag "LaTeXMathML", "livepipe", "livepipe-ui-window", "livepipe-ui-textarea"
     = stylesheet_link_tag "LaTeXMathML.standardarticle"
     = yield(:head)
   
@@ -58,4 +57,3 @@
         %h1=h yield(:title)
       
       = yield
-  = "<script type=\"text/javascript\" src=\"http://tex.yourequations.com/\"></script>"

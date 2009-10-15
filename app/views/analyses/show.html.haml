@@ -4,7 +4,7 @@
     %em= "by %s" % @analysis.user.username
 
 %div.analysis
-  ~ @analysis.body_to_html
+  ~ @analysis.body
 
 %p.actions
   - if current_user == @analysis.user || current_user.admin?

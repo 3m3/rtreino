@@ -3,3 +3,8 @@
   = form.input :commentable_type, :as => :hidden
   = form.input :subject
   = form.input :body
+
+:javascript
+  document.observe('dom:loaded', function() {
+    setToolbarFor('comment_body');
+  });

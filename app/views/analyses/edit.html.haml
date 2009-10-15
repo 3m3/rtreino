@@ -1,11 +1,6 @@
 %h1.heading
   = "Editing analysis of <br />%s - <em>%s</em>" % [@problem.code, @problem.name]
 
-You can use a markup. Read about in 
-%a{:href => "http://txt2tags.sourceforge.net/markup.html"} http://txt2tags.sourceforge.net/markup.html.
-%br
-%br
-
 - semantic_form_for([@problem, @analysis]) do |form|
   = render 'form', :form => form
   - form.buttons do

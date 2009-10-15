@@ -2,3 +2,8 @@
   = form.input :language_id, :label => 'Language', :label_method => :name
   = form.input :title, :label => 'Title'
   = form.input :body, :label => 'Body'
+
+:javascript
+  document.observe('dom:loaded', function() {
+    setToolbarFor('statement_body');
+  });

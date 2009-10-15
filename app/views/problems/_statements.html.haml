@@ -6,7 +6,7 @@
     
   - @problem.statements.each do |statement|
     %div.statement.tabContent{ :id => "statement_#{statement.id}", :style => "display: #{(statement == @problem.statements.first) ? "block" : "none" };"}
-      ~ statement.body_to_html
+      ~ statement.body
       %p.actions
         = link_to 'Edit', edit_problem_statement_path(@problem, statement)
         |

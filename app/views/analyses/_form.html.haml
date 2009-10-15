@@ -1,2 +1,7 @@
 - form.inputs do
   = form.input :body
+
+:javascript
+  document.observe('dom:loaded', function() {
+    setToolbarFor('analysis_body');
+  });
