@@ -21,6 +21,12 @@ Event.observe(window, 'load', function() {
   if (e) e.focus();
 });
 
+// Replace div verbatim to pre verbatim 
+Event.observe(window, 'load', function() {
+  $$(".verbatim").each(function(node) {
+    node.update("<pre>" + node.innerHTML + "</pre>");
+  });
+});
 
 function preview(textarea) {
   $('preview').update('<h2>Preview</h2><hr/>' + $(textarea).value);
