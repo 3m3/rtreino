@@ -1,7 +1,9 @@
 %div{:style => 'text-align: center'}
   %h1.heading= "Problem %s" % @problem.code
   %p
-    %em= @problem.source
+    %em
+      Source:
+      = link_to @problem.source, problem_path(@problem) + "?source=" + @problem.source
 
 = render :partial => 'statements'
 

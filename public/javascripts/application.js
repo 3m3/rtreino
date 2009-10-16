@@ -110,6 +110,10 @@ function setToolbarFor(elem) {
       this.wrapSelection('{', '}^{}');
     }, {});
 
+    toolbar.addButton(iconImageTag('script_code', 'Code without format'),function(event){
+      this.wrapSelection('\\begin{verbatim}\n', '\\end{verbatim}\n');
+    }, {});
+
     toolbar.addButton(iconImageTag('math_sum', 'Math Sum'),function(event){
       this.wrapSelection('$\\sum_{i=0}^{n}', '$');
     }, {});
@@ -121,7 +125,6 @@ function setToolbarFor(elem) {
     toolbar.addButton(iconImageTag('math_sqrt', 'Math Sqrt'),function(event){
       this.wrapSelection('$\\sqrt{','}$');
     }, {});
-
 
     toolbar.addButton(iconImageTag('math', 'Math inline'),function(event){
       this.wrapSelection('$', '$')

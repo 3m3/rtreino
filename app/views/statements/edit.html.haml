@@ -1,5 +1,11 @@
-%h1.heading
-  = "Editing statement of <br />%s - <em>%s</em>" % [@problem.code, @problem.name]
+%center
+  %h1.heading
+    Editing statement of
+    = link_to @problem.code, problem_path(@problem)
+  %p 
+    %em
+      Source:
+      = link_to @problem.source, problem_path(@problem) + "?source=" + @problem.source
 
 - semantic_form_for([@problem, @statement]) do |form|
   = render 'form', :form => form

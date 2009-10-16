@@ -17,6 +17,9 @@ div.comment {
 h1 {
   font-size: 18px; }
 
+h1, h2, h3 {
+  text-align: center; }
+
 .problem_code, .problem_level_id { 
   min-width: 100px; }
 .problem_name {

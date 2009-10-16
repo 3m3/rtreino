@@ -1,5 +1,7 @@
 %div.centered
-  %h1.heading= "Analysis of problem %s" % @analysis.problem.code
+  %h1.heading
+    Analysis of problem
+    = link_to @analysis.problem.code, problem_path(@analysis.problem)
   %p
     %em= "by %s" % @analysis.user.username
 
