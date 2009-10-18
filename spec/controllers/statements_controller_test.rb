@@ -77,7 +77,7 @@ describe StatementsController do
   describe "Authenticated" do 
     before(:each) do 
       execute_login
-      @statement = Factory.create(:statement)
+      @statement = Factory.create(:statement, :creator => @user)
       @problem = @statement.problem
     end  
 

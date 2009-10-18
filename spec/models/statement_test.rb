@@ -1,7 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Statement do
-
   it "should not be valid" do
     Factory.build(:invalid_statement).should_not be_valid
   end
@@ -21,4 +20,11 @@ describe Statement do
       :problem_id => statement_first.problem_id).should_not be_valid
   end
 
+  it "should not be valid if hasn't creator" do
+    Factory.build(:statement, :creator => nil).should_not be_valid
+  end
+
+  it "should not be valid if hasn't updater" do
+    Factory.build(:statement, :updater => nil).should_not be_valid
+  end
 end

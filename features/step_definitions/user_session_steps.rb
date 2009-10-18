@@ -1,13 +1,11 @@
-def register_user(as_admin=false)
-  if as_admin
-    @user ||= Factory.create(:user, :username => 'User', :confirmation_ok => true, :admin => true)
-  else
-    @user ||= Factory.create(:user, :username => 'User', :confirmation_ok => true)
-  end
+def register_user(options={})
+  options[:confirmation_ok] = true
+  options[:username] = 'User' unless options.has_key? :username
+  @user ||= Factory.create(:user, options)
 end
 
-def login(as_admin=false)
-  register_user(as_admin)
+def login(options={})
+  register_user(options)
   visit path_to("the homepage")
   response.should contain("Login")
   click_link "Login"
@@ -28,7 +26,11 @@ When /^I login$/ do
 end
 
 Given /^I login as admin$/ do
-  login(true)
+  login(:admin => true)
+end
+
+Given /^I login as "([^\"]*)"$/ do |username|
+  login(:username => username)
 end
 
 When /^I am logged in$/ do

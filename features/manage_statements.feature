@@ -29,14 +29,16 @@ Feature: Manage statements
     And I press "Create and continue"
     Then I should be on the edit problem statement page
 
-
   Scenario: Edit some statement
-    Given I login
+    Given I login as "wanderley"
     And I am on the edit statement of problem page
     And I fill in "Title" with "title 2"
     When I fill in "Body" with "body 2"
     And I press "Update"
     Then I should be on the problem page
+    And I should see "Created by"
+    And I should see "Updated by"
+    And I should see "wanderley"
 
   Scenario: Edit some statement and continuing edit
     Given I login

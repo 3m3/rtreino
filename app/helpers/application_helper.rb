@@ -5,4 +5,18 @@ module ApplicationHelper
   def set_focus_to_id(id)
     javascript_tag("$('#{id}').focus()");
   end
+
+  def userstamp_for(object)
+    """<p class=\"userstamp\">
+  <b>Created by</b>
+  #{object.creator.username}
+  at
+  #{"%s ago" % time_ago_in_words(object.created_at)}
+  |
+  <b>Updated by</b>
+  #{object.updater.username}
+  at
+  #{"%s ago" % time_ago_in_words(object.updated_at)}
+</p>"""
+  end
 end

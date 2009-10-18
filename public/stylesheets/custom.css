@@ -25,6 +25,10 @@ h1, h2, h3 {
 .problem_name {
   min-width: 300px; }
 
+.userstamp {
+  color: gray; 
+  font-size: 8px; }
+
 #tabs {
   margin: 0; }
 #tabs ul {
