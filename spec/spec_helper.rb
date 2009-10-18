@@ -5,8 +5,6 @@ require File.dirname(__FILE__) + "/../config/environment" unless defined?(RAILS_
 require 'spec/autorun'
 require 'spec/rails'
 require 'authlogic/test_case'
-require File.dirname(__FILE__) + "/factories"
-require File.dirname(__FILE__) + "/utils"
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
