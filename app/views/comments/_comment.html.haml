@@ -2,14 +2,14 @@
   %p
     %b Subject:
     = comment.subject
-    %em= "- by %s" % comment.user.username
+    %em= "- by %s" % comment.creator.username
     %br
     %b Body:
     %br
     ~ comment.body
 
   %p.actions
-    - if current_user == comment.user || current_user.admin?
+    - if current_user == comment.creator || current_user.admin?
       = link_to 'Edit', edit_comment_path(comment)
       |
     = link_to 'Reply', new_comment_comment_path(comment)

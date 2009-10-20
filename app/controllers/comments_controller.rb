@@ -17,7 +17,6 @@ class CommentsController < InheritedResources::Base
   end
 
   def create
-    params[:comment][:user_id] = current_user.id
     create! { path_for @comment}
   end
 
@@ -47,11 +46,10 @@ class CommentsController < InheritedResources::Base
 
   def authorize
     comment = Comment.find(params[:id])
-    if !current_user.admin? && current_user.id != comment.user_id
+    if !current_user.admin? && current_user.id != comment.creator_id
       flash[:error] = "Unauthorized access!"
       redirect_to root_path
       false
     end
   end
-
 end

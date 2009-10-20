@@ -17,7 +17,7 @@ describe CommentsController do
   describe "Analysis" do
 
     before(:each) do
-      @comment = Factory.create(:comment_from_analysis, :user => @user)
+      @comment = Factory.create(:comment_from_analysis, :creator => @user)
       @analysis = @comment.commentable
     end
 
@@ -69,7 +69,7 @@ describe CommentsController do
   describe "Comment" do
 
     before(:each) do
-      @comment = Factory.create(:comment_from_comment, :user => @user)
+      @comment = Factory.create(:comment_from_comment, :creator => @user)
       @comment_parent = @comment.commentable
       @analysis = @comment_parent.commentable
     end
