@@ -6,7 +6,7 @@ describe AnalysesController do
   describe "Authenticated" do
     before(:each) do
       execute_login
-      @analysis = Factory.create(:analysis, :user => @user)
+      @analysis = Factory.create(:analysis, :creator => @user)
       @problem = @analysis.problem
     end
 

@@ -7,7 +7,6 @@ class AnalysesController < InheritedResources::Base
   belongs_to :problem, :finder => :find_by_code!
 
   def create
-    params[:analysis][:user_id] = current_user.id
     create! do |success, failure|
       success.html do
         if params[:commit] == 'Create and continue'
@@ -46,13 +45,10 @@ class AnalysesController < InheritedResources::Base
 
   def authorize
     analysis = Analysis.find(params[:id])
-    if !current_user.admin? && current_user.id != analysis.user_id
+    if !current_user.admin? && current_user.id != analysis.creator_id
       flash[:error] = "Unauthorized access!"
       redirect_to edit_problem_path(analysis.problem)
       false
     end
   end
-
-  
-
 end

@@ -3,13 +3,13 @@
     Analysis of problem
     = link_to @analysis.problem.code, problem_path(@analysis.problem)
   %p
-    %em= "by %s" % @analysis.user.username
+    %em= "by %s" % @analysis.creator.username
 
 %div.analysis
   ~ @analysis.body
 
 %p.actions
-  - if current_user == @analysis.user || current_user.admin?
+  - if current_user == @analysis.creator || current_user.admin?
     = link_to 'Edit', edit_problem_analysis_path(@problem, @analysis)
     |
   = link_to 'New comment', new_analysis_comment_path(@analysis)

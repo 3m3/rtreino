@@ -4,12 +4,12 @@ end
 
 Given /^I created a analysis to problem TEST$/ do
   problem  = Factory.create(:problem, :code => 'TEST')
-  analysis = Factory.create(:analysis, :problem => problem, :user => @user)
+  analysis = Factory.create(:analysis, :problem => problem, :creator => @user)
 end
 
 Given /^I updated a analysis to problem TEST$/ do
   problem = Problem.find_by_code('TEST')
-  analysis = problem.analyses.find_by_user_id(@user.id)
+  analysis = problem.analyses.find_by_creator_id(@user.id)
   analysis.body = "changed"
   analysis.save
 end

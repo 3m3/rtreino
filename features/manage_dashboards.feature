@@ -20,7 +20,7 @@ Feature: Manage dashboard
     And I updated a analysis to problem TEST
     And I am on the dashboard page
     Then I should see "User created an analysis for problem TEST"
-    And I should see "User updated your analysis from problem TEST"
-    When I follow "User updated your analysis from problem TEST"
+    And I should see "User updated his analysis from problem TEST"
+    When I follow "User updated his analysis from problem TEST"
     Then I should be on the problem analysis page
     And I should see "by User"

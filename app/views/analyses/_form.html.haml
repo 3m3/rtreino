@@ -1,4 +1,6 @@
 - form.inputs do
+  = form.input :creator_id, :as => :hidden, :value => (@analysis.creator_id || current_user.id)
+  = form.input :updater_id, :as => :hidden, :value => current_user.id 
   = form.input :body
 
 :javascript

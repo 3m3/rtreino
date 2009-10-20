@@ -6,7 +6,8 @@ module ActsAsUserstampableModel
   end
 end
 
-module ActsAsUserstampableHelper
+#module ActsAsUserstampableHelper
+module ApplicationHelper
   def userstamp_for(object)
     """<p class=\"userstamp\">
   <b>Created by</b>

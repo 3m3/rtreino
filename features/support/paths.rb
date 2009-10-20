@@ -28,7 +28,7 @@ module NavigationHelpers
       @problem = @analysis.problem
       problem_path(@problem)
     when /the show page of some problem that has only one analysis that I commented/
-      @comment = Factory.create(:comment_from_analysis, :user => @user)
+      @comment = Factory.create(:comment_from_analysis, :creator => @user)
       @analysis = @comment.commentable
       @problem = @analysis.problem
       problem_path(@problem)
@@ -67,7 +67,7 @@ module NavigationHelpers
     when /the new analysis of problem page/
       new_problem_analysis_path(@problem)
     when /the edit my analysis of problem page/
-      @analysis = Factory.create(:analysis, :user => @user)
+      @analysis = Factory.create(:analysis, :creator => @user)
       @problem = @analysis.problem
       edit_problem_analysis_path(@problem, @analysis)
     when /the show page of problem with code TEST/

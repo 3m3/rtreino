@@ -20,7 +20,7 @@
       %th Actions
   - @problem.analyses.each do |analysis|
     %tr
-      %td= analysis.user.username
+      %td= analysis.creator.username
       %td{:align => :center}= "%s ago" % time_ago_in_words(analysis.created_at)
       %td{:align => :center}= "%s ago" % time_ago_in_words(analysis.updated_at)
       %td{:align => :center}

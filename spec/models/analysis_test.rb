@@ -13,8 +13,12 @@ describe Analysis do
     Factory.build(:analysis, :problem => nil).should_not be_valid
   end
 
-  it "without user association should not be valid" do
-    Factory.build(:analysis, :user => nil).should_not be_valid
+  it "without creator association should not be valid" do
+    Factory.build(:analysis, :creator => nil).should_not be_valid
+  end
+
+  it "without updater association should not be valid" do
+    Factory.build(:analysis, :updater => nil).should_not be_valid
   end
 
   it "without body text should not be valid" do

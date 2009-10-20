@@ -7,12 +7,23 @@ module DashboardHelper
     when 'Analysis'
       analysis = Analysis.find(log.loggable_id)
       if log.action == 'create'
-        link_text = "#{analysis.user.username} created an analysis for problem #{analysis.problem.code}"
+        link_text = "#{analysis.creator.username} created an analysis for problem #{analysis.problem.code}"
       elsif log.action == 'update'
-        link_text = "#{analysis.user.username} updated your analysis from problem #{analysis.problem.code}"
+        if analysis.creator == analysis.updater
+          link_text = "#{analysis.updater.username} updated his analysis from problem #{analysis.problem.code}"
+        else
+          link_text = "#{analysis.updater.username} updated #{analysis.creator.username}'s analysis from problem #{analysis.problem.code}"
+        end
       end
-
       link_to link_text, problem_analysis_path(analysis.problem, analysis)
+    when 'Statement'
+      statement = Statement.find(log.loggable_id)
+      if log.action == 'create'
+        link_text = "#{statement.creator.username} created an #{statement.language.abbreviation} statement for problem #{statement.problem.code}"
+      else
+        link_text = "#{statement.creator.username} updated an #{statement.language.abbreviation} statement for problem #{statement.problem.code}"
+      end
+      link_to link_text, problem_path(statement.problem)
     end
   end
 end
