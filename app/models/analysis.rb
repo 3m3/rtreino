@@ -7,4 +7,5 @@ class Analysis < ActiveRecord::Base
   acts_as_userstampable
   acts_as_model_loggable
   convert_txt_to_tags :body
+  versioned
 end

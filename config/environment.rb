@@ -44,4 +44,5 @@ Rails::Initializer.run do |config|
   config.gem 'will_paginate'
   config.gem 'justinfrench-formtastic', :lib => 'formtastic', :source => 'http://gems.github.com'
   config.gem 'josevalim-inherited_resources', :lib => 'inherited_resources', :source => 'http://gems.github.com' 
+  config.gem 'vestal_versions'
 end
