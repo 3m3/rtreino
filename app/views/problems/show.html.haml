@@ -3,7 +3,7 @@
   %p
     %em
       Source:
-      = link_to @problem.source, problem_path(@problem) + "?source=" + @problem.source
+      = link_to @problem.source, problems_path + "?source=" + @problem.source
 
 = render :partial => 'statements'
 

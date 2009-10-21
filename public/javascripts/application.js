@@ -24,7 +24,13 @@ Event.observe(window, 'load', function() {
 // Replace div verbatim to pre verbatim 
 Event.observe(window, 'load', function() {
   $$(".verbatim").each(function(node) {
-    node.update("<pre>" + node.innerHTML + "</pre>");
+    var rep = "";
+    node.innerHTML.split("\n").each(function(line) {
+      if (!(rep == "" && line == " ")) {
+        rep += line.gsub(" ", "&nbsp;") + '<br/>';
+      }
+    });
+    node.update(rep);
   });
 });
 
