@@ -3,7 +3,7 @@
   %p
     %em
       Source:
-      = link_to @problem.source, problems_path + "?source=" + @problem.source
+      = link_to @problem.source, url_for(:controller => 'problems', :action => 'index', :source => @problem.source)
 
 = render :partial => 'statements'
 
