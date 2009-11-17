@@ -3,36 +3,37 @@ require 'rubygems'
 require 'hpricot'
 require 'timeout'
  
-class PKU
+class LiveArchive
   
-  def self.submissions_for(user, newer_than = -1)
-    url_status = "http://acm.pku.edu.cn/JudgeOnline/status?user_id=#{user}"
-    #http://acmicpc-live-archive.uva.es/nuevoportal/status.php?u=22122QA
+  def self.submissions_for(id_with_suffix, newer_than = -1)
+    url_status = "http://acmicpc-live-archive.uva.es/nuevoportal/status.php?u=#{id_with_suffix}"
     all_submissions = Array.new
-    last_run_id = nil
-    while true do
-      Timeout::timeout(100) do
-        table = Hpricot(open(url_status + (last_run_id.nil? ? "" : "&top=#{last_run_id}"))).at("//table[@class='a']")
-        header = get_header(table.at("tr[@class='in']"))
-        table.search("tr[@align='center']").collect do |row|
+    Timeout::timeout(100) do
+        table = Hpricot(open(url_status)).at("//table[@class='ContentTable']")
+        header = get_header(table.at("tr[@class='ContentHeaderRow']"))
+        table.search("tr[@align='center']").each do |row|
           submission = get_submission(row,header)
-          all_submissions << submission if submission["Run ID"].to_i > newer_than.to_i
+          all_submissions << submission
         end
-      end
-      break if all_submissions.empty? or last_run_id == all_submissions.last["Run ID"]
-      last_run_id = all_submissions.last["Run ID"]
-    end
+    end    
     all_submissions
   end
  
-  private
- 
+   private
+
   def self.get_submission(row, header)
     s = Hash.new
     row.search("td").each_with_index do |t,i|
+      original = t
       t = t.at("a") if !t.search("a").empty?
       t = t.at("font") if !t.search("font").empty?
-      s[header[i]] = t.html
+      if(t.html =~ /&nbsp;(.*)&nbsp;/)
+        s[header[i]] = $1
+      else
+        s[header[i]] = t.html
+      end
+      s[header[i]] += original.children[1].to_plain_text if original.children.size > 1
+      
     end
     s
   end
