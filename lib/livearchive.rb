@@ -32,8 +32,7 @@ class LiveArchive
       else
         s[header[i]] = t.html
       end
-      s[header[i]] += original.children[1].to_plain_text if original.children.size > 1
-      
+      s[header[i]] += original.children[1].to_plain_text.rstrip if original.children.size > 1
     end
     s
   end
